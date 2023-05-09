@@ -1,7 +1,21 @@
 @tailwind base;
+
+@layer base {
+
+  button {
+    @apply  rounded-lg py-2 hover:shadow-lg
+  }
+  input {
+    @apply border border-gray-300 p-1 rounded-lg focus:border-gray-400 focus:outline-none
+  }
+  textarea {
+    @apply border border-gray-300 p-1 rounded-lg focus:border-gray-400 focus:outline-none
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
-
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -14,9 +28,9 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +38,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
