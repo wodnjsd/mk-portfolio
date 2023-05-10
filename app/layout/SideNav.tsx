@@ -6,6 +6,8 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { motion, useCycle } from 'framer-motion'
 import { useState } from "react"
 import {BsInstagram} from 'react-icons/bs'
+import Image from 'next/image'
+import logo from '../../assets/logos/logo-square-transparent.png'
 
 type Props = {}
 
@@ -26,7 +28,8 @@ const Sidenav = (props: Props) => {
   }
 
   return (
-    <div className="sm:hidden">
+    <div className="sm:hidden h-full flex justify-between text-logo">
+      <Image src={logo} alt="logo" width={40} />
       <button onClick={toggle}>{isOpen ? <IoClose /> : <AiOutlineMenu />}</button>
       {isOpen && <motion.div initial={{ width: 0 }} animate={{ width: 300 }}>
         <ul className='flex flex-col justify-between gap-3 items-center'>
