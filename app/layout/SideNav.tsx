@@ -7,7 +7,7 @@ import { motion, useCycle } from 'framer-motion'
 import { useState } from "react"
 import {BsInstagram} from 'react-icons/bs'
 import Image from 'next/image'
-import logo from '../../assets/logos/logo-square-transparent.png'
+
 
 type Props = {}
 
@@ -28,19 +28,16 @@ const Sidenav = (props: Props) => {
   }
 
   return (
-    <div className="sm:hidden h-full flex justify-between text-logo">
-      <Image src={logo} alt="logo" width={40} />
-      <button onClick={toggle}>{isOpen ? <IoClose /> : <AiOutlineMenu />}</button>
-      {isOpen && <motion.div initial={{ width: 0 }} animate={{ width: 300 }}>
+    <div className="sm:hidden absolute z-40 h-full w-full flex flex-col justify-between text-logo">
+      <button onClick={toggle}>{isOpen ? <IoClose/> : <AiOutlineMenu />}</button>
+      {isOpen && <motion.div initial={{ width: 0 }} animate={{ width: "100%" }}>
         <ul className='flex flex-col justify-between gap-3 items-center'>
           {links.map((link) => (
             <li key={link.id} className="hover:font-bold"><Link href={link.to} onClick={toggle}>{link.name}</Link></li>)
           )}
               <a href="https://www.instagram.com/dr.kimdental/" target="_blank"> <BsInstagram /></a>
         </ul>
-   
       </motion.div>}
-
     </div>
 
 

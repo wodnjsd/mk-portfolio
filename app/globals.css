@@ -6,10 +6,13 @@
     @apply  rounded-lg py-2 hover:shadow-lg
   }
   input {
-    @apply border border-gray-300 p-1 rounded-lg focus:border-gray-400 focus:outline-none
+    @apply border-b bg-transparent border-gray-300 p-1 focus:border-gray-400 focus:outline-none mb-4
   }
   textarea {
-    @apply border border-gray-300 p-1 rounded-lg focus:border-gray-400 focus:outline-none
+    @apply border border-gray-300 rounded-lg p-1 bg-transparent focus:border-gray-400 focus:outline-none mb-4
+  }
+  label {
+    @apply text-xs
   }
 }
 

@@ -2,7 +2,7 @@ import Nav from './layout/Nav'
 import './globals.css'
 import Footer from './layout/Footer'
 import SideNav from './layout/SideNav'
-import { Lora, Roboto } from 'next/font/google'
+import { Lora, Roboto, Inter_Tight, Montserrat} from 'next/font/google'
 
 export const metadata = {
   title: 'Michael Kim',
@@ -15,14 +15,30 @@ const lora = Lora({
   variable: '--font-lora'
 })
 
+const roboto = Roboto({
+  weight: "300",
+  subsets: ['latin'],
+  variable: '--font-roboto'
+})
+
+const inter = Inter_Tight({
+  subsets: ['latin'],
+  variable: '--font-inter'
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat'
+})
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${lora.variable}`}>
-      <body className="mx-10 my-10 h-screen flex flex-col justify-between bg-neutral-600 text-neutral-200" ><SideNav /><Nav />{children}<Footer /></body>
+    <html lang="en" className={`${lora.variable} ${roboto.variable} ${inter.variable} ${montserrat.variable}`}>
+      <body className="my-10 h-screen flex flex-col justify-between bg-neutral-600 font-inter font-light text-neutral-100" ><Nav />{children}<Footer /></body>
     </html>
   )
 }

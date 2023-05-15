@@ -8,7 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        lora: ['var(--font-lora)']
+        lora: ['var(--font-lora)'],
+        roboto: ['var(--font-roboto)'],
+        inter: ['var(--font-inter)'],
+        montserrat: ['var(--font-montserrat)']
       },
       colors: {
         logo: "#ddcabc"
