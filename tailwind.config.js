@@ -11,7 +11,8 @@ module.exports = {
         lora: ['var(--font-lora)'],
         roboto: ['var(--font-roboto)'],
         inter: ['var(--font-inter)'],
-        montserrat: ['var(--font-montserrat)']
+        montserrat: ['var(--font-montserrat)'],
+        allura: ['var(--font-allura)']
       },
       colors: {
         logo: "#ddcabc"

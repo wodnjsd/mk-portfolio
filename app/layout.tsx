@@ -1,8 +1,8 @@
 import Nav from './layout/Nav'
 import './globals.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Footer from './layout/Footer'
-import SideNav from './layout/SideNav'
-import { Lora, Roboto, Inter_Tight, Montserrat} from 'next/font/google'
+import { Lora, Roboto, Inter_Tight, Montserrat, Allura} from 'next/font/google'
 
 export const metadata = {
   title: 'Michael Kim',
@@ -31,14 +31,20 @@ const montserrat = Montserrat({
   variable: '--font-montserrat'
 })
 
+const allura = Allura({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-allura'
+})
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${lora.variable} ${roboto.variable} ${inter.variable} ${montserrat.variable}`}>
-      <body className="my-10 h-screen flex flex-col justify-between bg-neutral-600 font-inter font-light text-neutral-100" ><Nav />{children}<Footer /></body>
+    <html lang="en" className={`${lora.variable} ${roboto.variable} ${inter.variable} ${montserrat.variable}  ${allura.variable}`}>
+      <body className="mt-10 h-screen flex flex-col justify-between bg-neutral-600 font-inter font-light text-neutral-100" ><Nav />{children}<Footer /></body>
     </html>
   )
 }
