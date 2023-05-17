@@ -20,7 +20,7 @@ const page = (props: Props) => {
         ))}
       </ul>
       <div className='w-full flex justify-center py-20'>More Coming Soon...</div>
-      <div className="lg:hidden w-full flex justify-center">
+      <div className="mb-10 border rounded-lg lg:hidden w-full flex justify-center">
         <ReviewCarousel />
       </div>
       <div className='hidden lg:flex gap-5 text-xs italic pb-10'>

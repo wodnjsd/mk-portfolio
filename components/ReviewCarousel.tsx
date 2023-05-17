@@ -1,5 +1,4 @@
 "use client"
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 import testimonials from '@/data/testimonials'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -9,7 +8,7 @@ const ReviewCarousel = () => {
   let autoSlide = true
   let autoSlideInterval = 5000
 
-  const previous = () => setCurrent((current: number) => (current === 0 ? testimonials.length - 1 : current - 1))
+
   const next = () => setCurrent((current: number) => (current === testimonials.length - 1 ? 0 : current + 1))
   const variants = {
     hidden: { opacity: 0, x: -50, y:0 },
@@ -23,20 +22,8 @@ const ReviewCarousel = () => {
   }, [])
 
   return (
-    // <div className='w-4/5 overflow-hidden relative'>
-    //   <div className="w-full flex transition-transform ease-out duration-500"
-    //     style={{ transform: `translateX(-${current * 100}%)` }}>
-    //     {testimonials.map((item, i) => (
-    //       <div className='w-full'>{item.content}</div>
-    //     ))}
-    //   </div>
-    //   <div className='absolute inset-0 flex items-center justify-between p-4'>
-    //     <button onClick={previous} className='p-2 rounded-full shadow border hover:bg-white hover:text-gray-600'><FaArrowLeft /></button>
-    //     <button onClick={next} className='p-2 rounded-full shadow border hover:bg-white hover:text-gray-600'><FaArrowRight /></button>
-    //   </div>
 
-    // </div>
-    <div className='mb-10 border rounded-lg flex justify-center items-center h-36 w-4/5 px-10'>
+    <div className=' flex justify-center items-center'>
         <motion.div
           variants={variants}
           initial="hidden"

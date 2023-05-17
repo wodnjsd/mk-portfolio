@@ -10,10 +10,10 @@ const Footer = (props: Props) => {
     <div className="bg-neutral-700 px-12 text-sm flex flex-col py-12 items-center gap-6 font-inter font-thin">
       <div className="text-4xl text-logo"><a><BsInstagram /></a></div>
       <div className="flex gap-5">
-        <Link href='/treatments'>Treatments</Link>
-        <Link href='/portfolio'>Portfolio</Link>
-        <Link href='/tutoring'>Tutoring</Link>
-        <Link href='/contact'>Contact</Link>
+        <Link href='/treatments' className="hover:underline">Treatments</Link>
+        <Link href='/portfolio' className="hover:underline">Portfolio</Link>
+        <Link href='/tutoring' className="hover:underline">Tutoring</Link>
+        <Link href='/contact' className="hover:underline">Contact</Link>
       </div>
       <div className="flex flex-col items-center md:inline">
         <span>COPYRIGHT © 2023 DR MICHAEL KIM.</span>

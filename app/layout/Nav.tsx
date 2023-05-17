@@ -53,9 +53,9 @@ const Nav = (props: Props) => {
       </div>
 {/* SideNav */}
       {isOpen && (
-        <motion.div initial={{ x: 40 }} animate={{ x: 0 }}
-          transition={{ duration: 0.1 }}
-          className='bg-stone-400 top-0 left-0 z-40 w-full h-screen flex flex-col justify-center absolute items-center sm:hidden'>
+        <motion.div initial={{ x: 100 }} animate={{ x: 0 }}
+          transition={{ duration: 0.2 }}
+          className='bg-stone-400 top-0 left-0 z-40 w-full h-full flex flex-col justify-center absolute items-center sm:hidden'>
           <ul className='flex flex-col items-center gap-5'>
             {links.map((link) => (
               <li key={link.id} onClick={toggle} className='hover:underline underline-offset-8'><Link href={link.to}>{link.name}</Link></li>
