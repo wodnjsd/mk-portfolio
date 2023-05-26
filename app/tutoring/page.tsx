@@ -1,37 +1,71 @@
 import Link from "next/link"
+import Image from "next/image"
+import tutoringData from "../../data/tutoring"
+
 
 type Props = {}
 
 const page = (props: Props) => {
   return (
-    <div className="m-10 sm:m-20 flex flex-col items-start sm:items-center gap-12 ">
-      <h1 className='text-3xl sm:self-center font-montserrat sm:py-50 font-normal'>KIM ACADEMY</h1>
+    <div className="p-10 sm:p-20 flex flex-col items-center gap-10 ">
+
+      <h1 className='text-3xl sm:self-center font-montserrat sm:py-10 font-normal'>KIM ACADEMY</h1>
       <hr className='w-full h-2' />
-      <p>Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels, as well as preparation for medical and dental applications.</p>
-      <div className="flex">
-        <div className="p-2 w-1/2 " >
-          <h3 className="text-lg py-4 font-normal">OUR SERVICES</h3>
-          <ul className="text-sm flex flex-col gap-3">
-            <li>- UK common entrance preparation</li>
-            <li>- GCSE, A-Level, IB Tutoring for most subjects and examination boards</li>
-            <li>- Foundation course university tutoring</li>
-            <li>- UCAS Dentistry and Medicine consultation and advice</li>
-            <li>- Intensive BMAT and UCAT tuition</li>
-            <li>- Personal Statement Courses</li>
-            <li>- Interview Preparation Tuition & Intensive Interview Masterclass</li>
-            <li>- Networking with successful doctors and dentists </li>
+
+      <p>Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
+        as well as preparation for medical and dental university applications.</p>
+
+      <h3 className="text-xl py-4 font-normal text-logo">OUR SERVICES</h3>
+      <div className="flex gap-5">
+        <div>
+          <h4 className="text-center border border-dotted p-1">Exam preparation</h4>
+          <ul className="text-sm flex flex-col">
+            <li className="border border-dotted p-1">- UK common entrance preparation</li>
+            <li className="border border-dotted p-1">- GCSE, A-Level, IB Tutoring for most subjects and examination boards</li>
+            <li className="border border-dotted p-1">- Foundation course university tutoring</li>
+            <li className="border border-dotted p-1 h-8">    </li>
           </ul>
         </div>
-        <div className="p-2 w-1/2">
-          <h3 className="text-lg py-4 font-normal">OUR STRENGTHS</h3>
-          <ul className="text-sm flex flex-col gap-3">
-            <li>- With montly report cards given out to parents, guardians and students, we continuously monitor our students' progress and identify gaps</li>
-            <li>- In-depth analysis on past results are done prior to any planning in order to tailor every student's needs</li>
-            <li>- All subjects will be taught by our professional tutors who specialise in their respective fields</li>
-            <li>- We test our students regularly with our question bank to familiarise them with potential interview/test questions</li>
-            <li>- Our Personal Statement counselling service guides students to position themselves as a more prospective candidate</li>
+
+        <div className="bg-logo/30">
+          <h4 className="text-center border border-dotted p-1">University applications</h4>
+          <ul className="text-sm">
+            <li className="border border-dotted p-1">- UCAS Dentistry and Medicine consultation and advice</li>
+            <li className="border border-dotted p-1">- Intensive BMAT and UCAT tuition</li>
+            <li className="border border-dotted p-1">- Personal Statement Courses</li>
+            <li className="border border-dotted p-1">- Interview Preparation Tuition & Intensive Interview Masterclass</li>
           </ul>
         </div>
+      </div>
+
+
+      <h3 className="text-xl py-4 font-normal text-logo">OUR STRENGTHS</h3>
+      <div>
+        <ul className="text-sm grid grid-cols-4 grid-flow-row gap-3">
+          <li className="border rounded-md p-5 flex flex-col justify-center gap-5">
+            <h5 className="font-normal text-center text-base">Monthly report cards</h5>
+            <p>
+              - we continuously monitor our students' progress and identify gaps
+            </p>
+          </li>
+          <li className="border rounded-md p-5 flex flex-col justify-center gap-5">
+            <h5 className="font-normal text-center text-base">In-depth analysis</h5>
+            <p>
+              - on past results prior to any planning in order to tailor every student's needs
+            </p>
+          </li>
+          <li className="border rounded-md p-5 flex flex-col justify-center gap-5">
+            <h5 className="font-normal text-center text-base">Professional tutors</h5>
+            <p>
+              - all subjects will be taught by experts in their fields
+            </p>
+          </li>
+          <li className="border rounded-md p-5 flex flex-col justify-center gap-5">
+            <h5 className="font-normal text-center text-base">Regular tests</h5>
+            <p>
+              - to familiarise students with potential interview/test questions
+            </p> </li>
+        </ul>
       </div>
 
 
@@ -55,27 +89,33 @@ const page = (props: Props) => {
         </div>
       </div>
       <hr className="w-full h-2" />
-      {/* 
-      <div>
-        <h3>Our Recent Track Record</h3>
-        <div>
-          <p>100%</p>
-          <p>Offer</p>
-        </div>
-        <p>20+</p>
-        <p>Students</p>
+
+      <h3 className="text-xl py-4 font-normal text-logo">OUR SUCCESS STORIES</h3>
+
+      <div className="flex justify-between gap-3">
+        {tutoringData.map((item) => (
+          <div key={item.id} className="border rounded-md flex flex-col items-center text-center">
+            <Image src={item.image} alt={item.subject} width={200}></Image>
+            <div className="p-3">
+            <p>{item.subject}</p>
+            <p>{item.university}</p>
+            <p>Class of {item.year}</p>
+            </div>
+          </div>
+        )
+        )}
       </div>
-      <div>
-        <p>2</p>
-        <p>Years</p>
-      </div> */}
+
+
       {/* Testimonials */}
-      <div className="flex gap-8 italic text-xs">
+      <div className="flex gap-8 italic text-xs py-10">
         <p>"I got the offer from Queen Marys! I am so happy and I cannot have done it without you. Thank you so much."</p>
         <p>"I am currently sitting on a UCL offer. Thank you so much for your great advice and help, without it I think I would have struggled a lot."</p>
+        <p>"I did two foundation years. First year without Michael, I failed. Second year with him, I passed."</p>
       </div>
+      
       <div><span className="font-medium hover:underline underline-offset-4"><Link href={"/contact"}>Contact Us</Link></span> to find out more!</div>
-      {/* <p>To find out more, please check out <span>      <a href="https://www.kimacademy.co.uk/home" target="_blank" >here:</a></span></p> */}
+
     </div >
   )
 }

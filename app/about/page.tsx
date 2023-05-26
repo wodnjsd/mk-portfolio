@@ -4,7 +4,7 @@ type Props = {}
 const page = (props: Props) => {
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="text-3xl">About</h1>
+      <h1 className="text-4xl">About</h1>
       <p>Dr Kim is an experienced clinician and roadman</p>
       <p>Dr. Kim was educated in London and graduated from King's College London with his bachelor of dental surgery degree.</p>
       <p>Kim has a lot of experience in general dentistry, but has a special interest in cosmetic dentistry and endodontics. He takes pride in his work

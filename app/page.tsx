@@ -12,8 +12,12 @@ export default function Home() {
   return (
     <main className="flex flex-col font-inter">
       <div className='flex bg-gradient-to-b from-neutral-600 to-neutral-800  pt-10'>
-        <div className='pl-10 flex flex-col gap-4 justify-center items-center basis-1/2'>
+        <div className='pl-10 flex flex-col gap-10 justify-center items-center basis-1/2'>
           <p className='font-allura text-5xl text-logo'>Dr. Michael Kim</p>
+          <p className='text-sm px-10 text-logo'>
+            As a clinician and tutor, I believe that there is no end to education. It is not that you read a book, pass an examination, and finish with education. Life as a whole - from the moment you are born to the moment you die - is a learning process.
+            My interest lies in caring for patients' long-term health through curing and preventing diseases with education.
+          </p>
           {/* <button className='bg-logo px-10 py-1 rounded-none text-neutral-800 font-normal'>Get in touch</button> */}
         </div>
         <div className='w-1/2 pt-20'>
@@ -21,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       {/* Testimonials */}
-      <div className='w-full bg-neutral-800 p-10 flex justify-center items-center md:hidden'>
+      <div className='w-full h-44 bg-neutral-800 p-10 flex justify-center items-center md:hidden'>
         <ReviewCarousel />
       </div>
 
@@ -65,11 +69,10 @@ export default function Home() {
           </div>
           <div className='px-4 flex flex-col gap-4 justify-center items-center flex-1 text-sm'>
             <p>Dr. Kim was educated in London and graduated from King's College London with his bachelor of dental surgery degree.
-              Kim has a lot of experience in general dentistry, but has a special interest in cosmetic dentistry and endodontics. He takes pride in his work
-              and would spend time reading and attending extra courses to hone his skillset.</p>
-            <p> He is currently a member of the Joint Council
-              for Cosmetic Practioners and a visiting guest lecturer in many different institutes in South Korea - teaching different techniques of learning
-              and mentoring aspiring medics or dentists.
+              Dr. Kim has a lot of experience in general dentistry. His particular interest is in cosmetic dentistry and endodontics. In these fields, Dr. Kim has trained under excellent specialists and continues to learning to improve his quality of care to his patients.
+              He takes pride in his work and would spend time reading and attending extra courses to hone his skillset. </p>
+            <p> He is currently a member of the Joint Council for Cosmetic Practioners and a visiting guest lecturer in many different institutes in South Korea
+              - teaching different techniques of learning and mentoring aspiring medics or dentists.
             </p>
             <p>
               Kim tries to keep his practice as friendly as possible and enjoys having conversations with his patients about anything. He is straightforward,

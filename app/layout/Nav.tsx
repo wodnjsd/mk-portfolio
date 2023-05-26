@@ -16,7 +16,6 @@ type Props = {}
 
 const links = [
   { name: "Home", to: "/", id: 1 },
-  // { name: "About", to: "/about", id: 2 },
   { name: "Treatments", to: "/treatments", id: 3 },
   { name: "Portfolio", to: "/portfolio", id: 4 },
   { name: "Tutoring", to: "/tutoring", id: 5 },
@@ -36,10 +35,10 @@ const Nav = (props: Props) => {
       {/* Logos */}
       <div>
         <Image src={logoSmall} alt="logo" width={40} height={40} className='sm:hidden' />
-        <Link href="/" className='hidden sm:inline'><Image src={logo} alt="logo" width={200} /></Link>
+        <Link href="/" className='hidden sm:inline'><Image src={logo} alt="logo" width={250} /></Link>
       </div>
       <div>
-        <div className='hidden sm:flex font-inter text-sm font-light py-3'>
+        <div className='hidden md:flex font-inter text-sm font-light py-3'>
           <ul className='flex gap-4'>
             {links.map((link) => (
               <li key={link.id} className={pathname === link.to? 'text-sm md:text-base text-logo font-normal underline underline-offset-8' : 'text-sm md:text-base hover:underline underline-offset-8' }><Link href={link.to}>{link.name}</Link></li>
@@ -47,7 +46,7 @@ const Nav = (props: Props) => {
              {/* className='text-sm md:text-base hover:underline underline-offset-8' */}
           </ul>
         </div>
-        <button onClick={toggle} className='sm:hidden fixed z-50'>
+        <button onClick={toggle} className='md:hidden fixed z-50'>
           {isOpen ? <IoClose /> : <AiOutlineMenu />}
         </button>
       </div>
@@ -55,7 +54,7 @@ const Nav = (props: Props) => {
       {isOpen && (
         <motion.div initial={{ x: 100 }} animate={{ x: 0 }}
           transition={{ duration: 0.2 }}
-          className='bg-stone-400 top-0 left-0 z-40 w-full h-full flex flex-col justify-center absolute items-center sm:hidden'>
+          className='bg-stone-400 top-0 left-0 z-40 w-full h-screen flex flex-col justify-center absolute items-center md:hidden'>
           <ul className='flex flex-col items-center gap-5'>
             {links.map((link) => (
               <li key={link.id} onClick={toggle} className='hover:underline underline-offset-8'><Link href={link.to}>{link.name}</Link></li>

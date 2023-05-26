@@ -1,22 +1,35 @@
-import React from 'react'
+"use client"
+import { useState } from 'react'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 
 type Props = {
-  name: string,
-  description: string,
+  item: { id: number, name: string, description: string, image:string },
+  onClose: () => void
 
 }
 
-const Treatment = ({name, description}: Props) => {
-  const overlayStyles = `p-5 absolute z-30 flex h-48 w-48 flex-col items-center justify-center
-  whitespace-normal bg-indigo-400 text-center text-white opacity-0 transition duration-500 hover:opacity-90`
+const Treatment = ({ item, onClose }: Props) => {
+
+  const [isOpen, setIsOpen] = useState(true)
+
+
   return (
-    <div className='flex justify-center items-center h-48 w-48'>
-      <h3>{name}</h3>
-      <div className={overlayStyles}>
-        <p>{name}</p>
-        <p>{description}</p>
+    <> 
+    {isOpen && <div className='absolute top-0 left-0 z-30 backdrop-blur-sm w-screen h-screen flex justify-center items-center '>
+      <div className='w-4/5 h-4/5 border rounded-md bg-logo text-neutral-800 flex flex-col jutify-between items-center'>
+        <button type='button' onClick={onClose} className='self-end p-5 text-xl'>
+          <AiOutlineCloseCircle />
+        </button>
+        <h3 className='font-normal text-lg'>{item.name}</h3>
+        <div>
+          <p>{item.description}</p>
+        </div>
       </div>
-    </div>
+    </div>}
+
+
+    </>
+
   )
 }
 
