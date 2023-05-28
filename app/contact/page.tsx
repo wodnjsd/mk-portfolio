@@ -22,15 +22,16 @@ const page = () => {
 
 
   return (
-    <div className='flex flex-col sm:flex-row gap-10 justify-between items-center m-5 md:m-20'>
+    <div className='max-w-6xl flex flex-col md:flex-row gap-10 justify-between md:items-center items-start py-20 mx-10 sm:mx-20'>
       <div>
-        <h1 className='text-4xl font-montserrat mb-10'>Get in touch</h1>
-        <div className='flex gap-5 text-lg'>
-          <BsInstagram />
-          <BsWhatsapp />
-          <SiKakaotalk />
+        <h1 className='text-5xl font-montserrat mb-10'>Get in touch</h1>
+        <div className='flex gap-3 text-xl py-5'>
+          <button className='p-1 rounded-lg transform hover:scale-125'> <a><BsInstagram /></a></button>
+          <button className='p-1 rounded-lg transform hover:scale-125'> <a><BsWhatsapp /></a></button>
+          <button className='p-1 rounded-lg transform hover:scale-125'> <a><SiKakaotalk /></a></button>
         </div>
-        <div className='mt-10'>Westbury Dental Care<br />75 Kingston Rd, <br/>New Malden, <br/> KT3 3PB</div>
+        <a href= "mailto: contactkimdental@gmail.com" className='py-10 underline underline-offset-2'> contactkimdental@gmail.com</a>
+        <div className='mt-5'><span className='text-sm'>You can find me working at:</span><br/>Westbury Dental Care<br />75 Kingston Rd, <br/>New Malden, <br/> KT3 3PB</div>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>

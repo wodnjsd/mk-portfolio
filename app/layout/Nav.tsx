@@ -9,7 +9,7 @@ import logoSmall from '../../public/assets/logos/logo-square-transparent.png'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import { IoClose } from 'react-icons/io5'
-import {BsInstagram} from 'react-icons/bs'
+import { BsInstagram } from 'react-icons/bs'
 
 type Props = {}
 
@@ -31,38 +31,43 @@ const Nav = (props: Props) => {
 
 
   return (
-    <div className='flex justify-between px-10'>
+    <div className='sticky flex justify-between px-6 md:px-10 py-12'>
       {/* Logos */}
       <div>
         <Image src={logoSmall} alt="logo" width={40} height={40} className='sm:hidden' />
         <Link href="/" className='hidden sm:inline'><Image src={logo} alt="logo" width={250} /></Link>
       </div>
+
+      {/* Nav Links */}
       <div>
         <div className='hidden md:flex font-inter text-sm font-light py-3'>
-          <ul className='flex gap-4'>
+          <ul className='flex gap-5'>
             {links.map((link) => (
-              <li key={link.id} className={pathname === link.to? 'text-sm md:text-base text-logo font-normal underline underline-offset-8' : 'text-sm md:text-base hover:underline underline-offset-8' }><Link href={link.to}>{link.name}</Link></li>
+              <li key={link.id} className={pathname === link.to ? 'text-sm md:text-base text-logo font-normal underline underline-offset-8' : 'text-sm md:text-base hover:underline underline-offset-8'}><Link href={link.to}>{link.name}</Link></li>
             ))}
-             {/* className='text-sm md:text-base hover:underline underline-offset-8' */}
+            {/* className='text-sm md:text-base hover:underline underline-offset-8' */}
           </ul>
         </div>
-        <button onClick={toggle} className='md:hidden fixed z-50'>
+        <button onClick={toggle} className='md:hidden sticky z-50 p-2 text-lg'>
           {isOpen ? <IoClose /> : <AiOutlineMenu />}
         </button>
       </div>
-{/* SideNav */}
+
+      {/* SideNav */}
       {isOpen && (
         <motion.div initial={{ x: 100 }} animate={{ x: 0 }}
           transition={{ duration: 0.2 }}
-          className='bg-stone-400 top-0 left-0 z-40 w-full h-screen flex flex-col justify-center absolute items-center md:hidden'>
-          <ul className='flex flex-col items-center gap-5'>
+          className='absolute bg-stone-400 top-0 left-0 z-40 w-full h-screen flex flex-col justify-center items-center md:hidden'>
+          <ul className='flex flex-col items-center gap-6 text-base'>
             {links.map((link) => (
               <li key={link.id} onClick={toggle} className='hover:underline underline-offset-8'><Link href={link.to}>{link.name}</Link></li>
             ))}
-               <a href="https://www.instagram.com/dr.kimdental/" target="_blank"> <BsInstagram /></a>
+            <button className='my-10 p-2 text-xl'>
+              <a href="https://www.instagram.com/dr.kimdental/" target="_blank"> <BsInstagram /></a>
+            </button>
           </ul>
         </motion.div>
-        )}
+      )}
     </div>
   )
 }

@@ -7,6 +7,7 @@ import image6 from "@/public/assets/portfolios/6.jpeg";
 import image7 from "@/public/assets/portfolios/7.png";
 import image8 from "@/public/assets/portfolios/8.jpeg";
 import image9 from "@/public/assets/portfolios/9.jpeg";
+import image10 from "@/public/assets/portfolios/10.jpeg";
 
 export default [
   { id: 7, image: image7, description: "Anterior white filling" },
@@ -18,4 +19,5 @@ export default [
   { id: 4, image: image4, description: "New white crown" },
   { id: 5, image: image5, description: "Extractions & Dentures" },
   { id: 6, image: image6, description: "Whitening & Composite bonding" },
+    { id: 10, image: image10, description: "Anterior white filling" },
 ];

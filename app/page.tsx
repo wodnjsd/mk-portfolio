@@ -14,10 +14,18 @@ export default function Home() {
       <div className='flex bg-gradient-to-b from-neutral-600 to-neutral-800  pt-10'>
         <div className='pl-10 flex flex-col gap-10 justify-center items-center basis-1/2'>
           <p className='font-allura text-5xl text-logo'>Dr. Michael Kim</p>
-          <p className='text-sm px-10 text-logo'>
-            As a clinician and tutor, I believe that there is no end to education. It is not that you read a book, pass an examination, and finish with education. Life as a whole - from the moment you are born to the moment you die - is a learning process.
-            My interest lies in caring for patients' long-term health through curing and preventing diseases with education.
+          <div className='text-sm px-10 text-logo'>
+          <p >
+            As a clinician and tutor, I believe that there is no end to education. It is not that you read a book, pass an examination, and finish with education. 
           </p>
+          <p className='py-2'>
+          Life as a whole - from the moment you are born to the moment you die - is a learning process.
+          </p>
+          <p>
+          My interest lies in caring for patients' long-term health through curing and preventing diseases with education.
+          </p>
+          </div>
+        
           {/* <button className='bg-logo px-10 py-1 rounded-none text-neutral-800 font-normal'>Get in touch</button> */}
         </div>
         <div className='w-1/2 pt-20'>
@@ -25,7 +33,7 @@ export default function Home() {
         </div>
       </div>
       {/* Testimonials */}
-      <div className='w-full h-44 bg-neutral-800 p-10 flex justify-center items-center md:hidden'>
+      <div className='w-full h-44 bg-neutral-800 p-10 flex justify-center items-center md:hidden -z-10 '>
         <ReviewCarousel />
       </div>
 
@@ -58,16 +66,14 @@ export default function Home() {
       </div>
 
       {/* About */}
-
       <h1 className='text-3xl sm:self-center font-montserrat p-10 sm:py-20 font-normal'>ABOUT</h1>
       <hr className='w-full' />
-
       <div className='p-10 md:p-0 relative'>
         <div className='flex flex-col items-center md:flex-row'>
           <div className='w-1/2 hidden md:inline'>
             <Image src={image2} alt="image2" />
           </div>
-          <div className='px-4 flex flex-col gap-4 justify-center items-center flex-1 text-sm'>
+          <div className='px-5 flex flex-col gap-4 justify-center items-center flex-1 text-sm'>
             <p>Dr. Kim was educated in London and graduated from King's College London with his bachelor of dental surgery degree.
               Dr. Kim has a lot of experience in general dentistry. His particular interest is in cosmetic dentistry and endodontics. In these fields, Dr. Kim has trained under excellent specialists and continues to learning to improve his quality of care to his patients.
               He takes pride in his work and would spend time reading and attending extra courses to hone his skillset. </p>
@@ -82,12 +88,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex flex-col md:flex-row'>
-          <div className='px-4 flex flex-col gap-4 justify-center items-center flex-1 text-sm'>
+        <div className='flex flex-col md:flex-row pt-4 md:pt-0'>
+          <div className='px-5 flex flex-col gap-4 justify-center items-center flex-1 text-sm'>
             <p> Outside of dental hours, Kim is a husband and a tutor to many students. Dr. Kim has a lot of experience teaching younger students in Biology,
               UCAT and with dental or medical university interviews. He enjoys reading books, collects watches and loves sports cars.</p>
             <p>His private mentoring and 'KimAcademy's Medicine Dentistry masterclass' is one of the leading courses of its type. The course has successfully taught over
-              500 students worldwide since its inception in 2018. The benefits of his mentoring and masterclasses can be found here(link).</p>
+              500 students worldwide since its inception in 2018. The benefits of his mentoring and masterclasses can be found <Link href="/tutoring" className='underline underline-offset-2 hover:font-semibold'>here</Link>.</p>
           </div>
           <div className='hidden md:inline w-1/2'>
             <Image src={image3} alt="image3" />

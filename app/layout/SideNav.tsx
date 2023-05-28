@@ -28,7 +28,7 @@ const Sidenav = (props: Props) => {
   }
 
   return (
-    <div className="sm:hidden absolute z-40 h-full w-full flex flex-col justify-between text-logo">
+    <div className="sm:hidden absolute z-50 h-full w-full flex flex-col justify-between text-logo">
       <button onClick={toggle}>{isOpen ? <IoClose/> : <AiOutlineMenu />}</button>
       {isOpen && <motion.div initial={{ width: 0 }} animate={{ width: "100%" }}>
         <ul className='flex flex-col justify-between gap-3 items-center'>

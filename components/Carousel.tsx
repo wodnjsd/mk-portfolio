@@ -20,7 +20,8 @@ const Carousel = () => {
   }, [])
 
   return (
-    <div className='overflow-hidden relative'>
+    <>
+    <div className='overflow-hidden relative z-20'>
       <div className="flex transition-transform ease-out duration-500"
         style={{ transform: `translateX(-${current * 100}%)` }}>
         {slides.map((item, i) => (
@@ -37,9 +38,10 @@ const Carousel = () => {
             <div className={`transition-all w-3 h-3 bg-white rounded-full ${current === i ? "p-2" : "bg-opacity-50"}`} />
           ))}
         </div>
-
       </div>
     </div>
+    <p className='text-center py-5'>{slides[current].description}</p>
+    </>
   )
 }
 

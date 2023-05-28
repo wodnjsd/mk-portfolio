@@ -44,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${lora.variable} ${roboto.variable} ${inter.variable} ${montserrat.variable}  ${allura.variable}`}>
-      <body className="mt-10 h-screen flex flex-col justify-between bg-neutral-600 font-inter font-light text-neutral-100" ><Nav />{children}<Footer /></body>
+      <body className=" h-screen flex flex-col justify-between bg-neutral-600 font-inter font-light text-neutral-100" ><Nav />{children}<Footer /></body>
     </html>
   )
 }
