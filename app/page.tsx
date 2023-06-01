@@ -45,8 +45,9 @@ export default function Home() {
           </div>)
         )}
       </div>
+
       {/* Links */}
-      <div className='flex justify-around w-full '>
+      <div className='flex justify-around w-full z-30'>
         <div className='flex relative justify-center items-center w-1/2'>
           <Link href={"/portfolio"}>
             <div className='absolute w-full h-full z-30 flex items-center justify-center bg-logo text-center text-white opacity-0 transition duration-500 hover:opacity-90'>

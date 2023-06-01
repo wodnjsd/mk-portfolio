@@ -10,14 +10,14 @@ import image9 from "@/public/assets/portfolios/9.jpeg";
 import image10 from "@/public/assets/portfolios/10.jpeg";
 
 export default [
-  { id: 7, image: image7, description: "Anterior white filling" },
-  { id: 8, image: image8, description: "Posterior white filling" },
-  { id: 9, image: image9, description: "Posterior white filling" },
   { id: 1, image: image1, description: "Invisalign" },
   { id: 2, image: image2, description: "Whitening" },
-  { id: 3, image: image3, description: "Anterior white filling" },
+  { id: 8, image: image8, description: "Posterior white filling" },
   { id: 4, image: image4, description: "New white crown" },
   { id: 5, image: image5, description: "Extractions & Dentures" },
+  { id: 7, image: image7, description: "Anterior white filling" },
   { id: 6, image: image6, description: "Whitening & Composite bonding" },
-    { id: 10, image: image10, description: "Anterior white filling" },
+  { id: 3, image: image3, description: "Anterior white filling" },
+  { id: 9, image: image9, description: "Posterior white filling" },
+  { id: 10, image: image10, description: "Anterior white filling" },
 ];
