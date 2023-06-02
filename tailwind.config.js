@@ -15,7 +15,8 @@ module.exports = {
         allura: ['var(--font-allura)']
       },
       colors: {
-        logo: "#ddcabc"
+        logo: "#ddcabc",
+        logoDark: "#cfb5a1"
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

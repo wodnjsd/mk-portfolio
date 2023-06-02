@@ -31,19 +31,19 @@ const Nav = (props: Props) => {
 
 
   return (
-    <div className='flex justify-between px-6 md:px-10 my-12'>
+    <div className='bg-neutral-700 flex justify-between px-6 md:px-10 py-12'>
       {/* Logos */}
       <div>
-        <Image src={logoSmall} alt="logo" width={40} height={40} className='sm:hidden' />
-        <Link href="/" className='hidden sm:inline'><Image src={logo} alt="logo" width={250} /></Link>
+        <Link href= "/" className='sm:hidden' ><Image src={logo} alt="logo" width={150}/></Link>
+        <Link href="/" className='hidden sm:inline'><Image src={logo} alt="logo" width={220} /></Link>
       </div>
 
       {/* Nav Links */}
       <div>
-        <div className='hidden md:flex font-inter text-sm font-light py-3'>
+        <div className='hidden md:flex text-sm md:text-base font-light py-3'>
           <ul className='flex gap-5'>
             {links.map((link) => (
-              <li key={link.id} className={pathname === link.to ? 'text-sm md:text-base text-logo font-normal underline underline-offset-8' : 'text-sm md:text-base hover:underline underline-offset-8'}><Link href={link.to}>{link.name}</Link></li>
+              <li key={link.id} className={pathname === link.to ? 'text-logo font-normal underline underline-offset-8' : 'hover:underline underline-offset-8'}><Link href={link.to}>{link.name}</Link></li>
             ))}
             {/* className='text-sm md:text-base hover:underline underline-offset-8' */}
           </ul>

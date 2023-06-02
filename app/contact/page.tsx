@@ -22,7 +22,7 @@ const page = () => {
 
 
   return (
-    <div className='max-w-6xl flex flex-col md:flex-row gap-10 justify-between md:items-center items-start py-20 mx-10 sm:mx-20'>
+    <div className='max-w-6xl flex flex-col md:flex-row gap-16 justify-around md:items-center items-start py-24 mx-12 sm:mx-20'>
       <div>
         <h1 className='text-5xl font-montserrat mb-10'>Get in touch</h1>
         <div className='flex gap-3 text-xl py-5'>

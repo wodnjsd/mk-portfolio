@@ -11,9 +11,8 @@ type Props = {}
 
 const page = (props: Props) => {
   return (
-    <div className="pt-10 px-10 sm:px-20 flex flex-col items-center gap-16 ">
-      <h1 className='text-3xl sm:self-center font-montserrat font-normal'>KIM ACADEMY</h1>
-      <hr className='w-full h-2' />
+    <div className="px-10 sm:px-20 flex flex-col items-center gap-16 ">
+      <h1 className='w-screen text-3xl pb-20 sm:pt-4 bg-neutral-700 text-center font-montserrat font-normal'>KIM ACADEMY</h1>
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 px-5">
         <div className="flex flex-col justify-center flex-1 ">
           <h4 className="text-2xl py-5">Private Tuition</h4>
@@ -63,21 +62,21 @@ const page = (props: Props) => {
             <li className="border rounded-md p-5 flex flex-col items-center text-center gap-3">
               <TbReportSearch className="text-2xl m-3" />
               <h5 className="font-normal">In-depth analysis</h5>
-              <p>
+              <p className="py-2">
                 On past results prior to any planning in order to tailor every student's needs
               </p>
             </li>
             <li className="border rounded-md p-5 flex flex-col items-center text-center gap-3">
               <SlGraduation className="text-2xl m-3" />
               <h5 className="font-normal">Professional tutors</h5>
-              <p>
+              <p className="py-2">
                 All subjects are taught by experts in their fields
               </p>
             </li>
             <li className="border rounded-md p-5 flex flex-col items-center text-center gap-3">
               <TbBook className="text-2xl m-3" />
               <h5 className="font-normal">Regular tests</h5>
-              <p>
+              <p className="py-2">
                 To familiarise students with potential interview/test questions
               </p>
             </li>
@@ -145,9 +144,9 @@ const page = (props: Props) => {
 
       {/* Contact */}
       <div className="w-screen bg-logo/50 text-neutral-800 text-lg font-normal flex justify-center items-center py-16">
-        <Link href={"/contact"} className="hover:underline underline-offset-4">CONTACT US 
+        <Link href={"/contact"} className="hover:underline underline-offset-4">CONTACT US
         </Link>
-       <span> TO FIND OUT MORE</span>
+        <span className="ml-2">TO FIND OUT MORE</span>
       </div>
     </div >
   )
