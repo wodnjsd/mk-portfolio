@@ -24,7 +24,7 @@ const Treatment = ({ item, onClose }: Props) => {
             </button>
               <h3 className='font-normal underline underline-offset-8 text-xl'>{item.name}</h3>
               <div className='h-full flex flex-col justify-center items-center '>
-              <p className='text-sm sm:text-base px-10 md:px-36'>{item.description}</p>
+              <p className='text-sm sm:text-base px-10 lg:px-36 whitespace-pre-line'>{item.description}</p>
             </div>
           </div>
         </div>}

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import tutoringData from "../../data/tutoring"
-import image8 from '../../public/assets/tutoring/8.jpeg'
+import student from '../../public/assets/student.jpg'
 import { MdOutlineInsertChart } from 'react-icons/md'
 import { TbReportSearch, TbBook } from 'react-icons/tb'
 import { SlGraduation } from 'react-icons/sl'
@@ -14,19 +14,19 @@ const page = (props: Props) => {
     <div className="px-10 sm:px-20 flex flex-col items-center gap-16 ">
       <h1 className='w-screen text-3xl pb-20 sm:pt-4 bg-neutral-700 text-center font-montserrat font-normal'>KIM ACADEMY</h1>
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 px-5">
-        <div className="flex flex-col justify-center flex-1 ">
+        <div className="flex flex-col justify-center flex-1 pr-3">
           <h4 className="text-2xl py-5">Private Tuition</h4>
           <p className="text-sm">Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
             as well as preparation for medical and dental university applications.</p>
         </div>
-        <Image src={image8} alt="students" className="w-full md:w-1/2" />
+        <Image src={student} alt="students" className="w-full rounded-md md:w-1/2" />
       </div>
 
       <div className="w-full flex flex-col items-center">
         <h3 className="text-xl py-8 font-normal text-logo">OUR SERVICES</h3>
 
         <div className="flex flex-col gap-5 md:flex-row">
-          <div className="text-center">
+          <div className="text-center rounded-lg">
             <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo">Exam preparation</h4>
             <ul className="h-56 text-sm flex flex-col gap-4 p-7 bg-logo/50">
               <li>UK common entrance preparation</li>
@@ -35,7 +35,7 @@ const page = (props: Props) => {
             </ul>
           </div>
 
-          <div className="text-center">
+          <div className="text-center rounded-lg">
             <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo">University applications</h4>
             <ul className="h-56 text-sm flex flex-col gap-4 p-7 bg-logo/50">
               <li>UCAS Dentistry and Medicine consultation and advice</li>
@@ -54,7 +54,7 @@ const page = (props: Props) => {
           <ul className="text-sm grid grid-cols-2 md:grid-cols-4 grid-flow-row gap-3">
             <li className="border rounded-md p-5 flex flex-col items-center text-center gap-3">
               <MdOutlineInsertChart className="text-2xl m-3" />
-              <h5 className="font-normal">Monthly report cards</h5>
+              <h5 className="font-normal">Regular Feedbacks</h5>
               <p className="text-center">
                 We continuously monitor our students' progress and identify gaps
               </p>
