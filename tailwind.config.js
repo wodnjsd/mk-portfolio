@@ -14,6 +14,9 @@ module.exports = {
         montserrat: ['var(--font-montserrat)'],
         allura: ['var(--font-allura)']
       },
+      screens: {
+        'xs': '375px',
+      },
       colors: {
         logo: "#ddcabc",
         logoDark: "#cfb5a1"

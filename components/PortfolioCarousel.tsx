@@ -40,7 +40,7 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-      <p className='text-center py-5'>{slides[current].description}</p>
+      <p className='text-center pt-8'>{slides[current].description}</p>
     </>
   )
 }

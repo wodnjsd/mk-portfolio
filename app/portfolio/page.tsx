@@ -1,5 +1,5 @@
 import ReviewCarousel from '@/components/ReviewCarousel'
-import PortfolioItem from '@/components/PortfolioItem'
+import PortfolioItem from '@/components/PortfolioOverlay'
 import testimonials from '@/data/testimonials'
 import PortfolioCarousel from '@/components/PortfolioCarousel'
 import portfolio from '@/data/portfolio.js'
@@ -21,7 +21,7 @@ const page = (props: Props) => {
             </li>
           ))}
         </ul>
-        <div className='w-full flex justify-center py-16'>More Coming Soon...</div>
+        <div className='w-full flex justify-center py-16 font-normal underline decoration-double underline-offset-4'>More Coming Soon...</div>
         <div className="sm:mb-10 lg:hidden w-full flex justify-center">
           <ReviewCarousel />
         </div>
