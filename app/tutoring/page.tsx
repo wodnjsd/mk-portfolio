@@ -12,7 +12,7 @@ type Props = {}
 const page = (props: Props) => {
   return (
     <div className="px-6 sm:px-20 flex flex-col items-center gap-16 ">
-      <h1 className='w-screen text-3xl pb-20 sm:pt-4 bg-neutral-700 text-center font-montserrat font-normal'>KIM ACADEMY</h1>
+      <h1 className='w-screen text-3xl pb-20 pt-4 bg-neutral-700 text-center font-montserrat font-normal'>KIM ACADEMY</h1>
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 sm:px-5">
         <div className="flex flex-col justify-center flex-1 pr-3">
           <h4 className="text-2xl py-5">Private Tuition</h4>
@@ -37,7 +37,7 @@ const page = (props: Props) => {
 
           <div className="text-center rounded-lg">
             <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo">University applications</h4>
-            <ul className="h-80 xs:h-56 text-sm flex flex-col gap-4 p-7 bg-logo/50">
+            <ul className="h-72 xs:h-56 text-sm flex flex-col gap-4 p-7 bg-logo/50">
               <li>UCAS Dentistry and Medicine consultation and advice</li>
               <li>Intensive BMAT and UCAT tuition</li>
               <li>Personal Statement Courses</li>
