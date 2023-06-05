@@ -5,13 +5,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import logo from '../../public/assets/logos/logo-full-transparent.png'
-import logoSmall from '../../public/assets/logos/logo-square-transparent.png'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import { IoClose } from 'react-icons/io5'
 import { BsInstagram } from 'react-icons/bs'
-
-type Props = {}
 
 
 const links = [
@@ -22,7 +19,7 @@ const links = [
   { name: "Contact", to: "/contact", id: 6 }
 ]
 
-const Nav = (props: Props) => {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => {
     setIsOpen(!isOpen)
@@ -32,6 +29,7 @@ const Nav = (props: Props) => {
 
   return (
     <div className='bg-neutral-700 flex justify-between px-6 md:px-10 py-12'>
+      
       {/* Logos */}
       <div>
         <Link href= "/" className='sm:hidden' ><Image src={logo} alt="logo" width={150}/></Link>
@@ -45,7 +43,6 @@ const Nav = (props: Props) => {
             {links.map((link) => (
               <li key={link.id} className={pathname === link.to ? 'text-logo font-normal underline underline-offset-8' : 'hover:underline underline-offset-8'}><Link href={link.to}>{link.name}</Link></li>
             ))}
-            {/* className='text-sm md:text-base hover:underline underline-offset-8' */}
           </ul>
         </div>
         <button onClick={toggle} className='md:hidden sticky z-50 p-2 text-lg'>
@@ -60,10 +57,12 @@ const Nav = (props: Props) => {
           className='absolute bg-stone-400 top-0 left-0 z-40 w-full h-full flex flex-col justify-center items-center md:hidden'>
           <ul className='flex flex-col items-center gap-6 text-base'>
             {links.map((link) => (
-              <li key={link.id} onClick={toggle} className='hover:underline underline-offset-8'><Link href={link.to}>{link.name}</Link></li>
+              <li key={link.id} onClick={toggle} className={pathname === link.to ? 'font-normal underline underline-offset-8' : 'hover:underline underline-offset-8'}>
+                <Link href={link.to}>{link.name}</Link>
+              </li>
             ))}
             <button className='my-10 p-2 text-xl'>
-              <a href="https://www.instagram.com/dr.kimdental/" target="_blank"> <BsInstagram /></a>
+              <a href="https://www.instagram.com/dr.kimdental/" target="_blank"><BsInstagram /></a>
             </button>
           </ul>
         </motion.div>
