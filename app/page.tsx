@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import face2 from '@/public/assets/face2.png'
 import face3 from '@/public/assets/face-colour.png'
 import image2 from '@/public/assets/working.png'
 import image3 from '@/public/assets/friendly.png'
@@ -13,15 +12,15 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <div className='relative pt-10 flex justify-start bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800'>
-        <div className='p-8 sm:p-10 lg:p-16 text-center flex flex-col gap-16 justify-center sm:w-3/5 z-10'>
-          <div className='text-base text-logo font-roboto font-extralight'>
-            <p >
+        <div className='p-8 sm:p-10 lg:p-16 xl:px-28 text-center flex flex-col gap-16 justify-center sm:w-3/5 z-10'>
+          <div className='text-base xl:text-lg text-logo font-roboto font-thin'>
+            <p className='leading-snug'>
               As a clinician and tutor, I believe that there is no end to education. It is not that you read a book, pass an examination, and finish with education.
             </p>
-            <p className='py-2'>
+            <p className='py-3 leading-snug'>
               Life as a whole - from the moment you are born to the moment you die - is a learning process.
             </p>
-            <p>
+            <p className='leading-snug'>
               My interest lies in caring for patients' long-term health through curing and preventing diseases with education.
             </p>
           </div>
@@ -69,12 +68,12 @@ export default function Home() {
       <h1 className='w-screen bg-neutral-700 text-3xl text-center font-montserrat py-16 sm:py-20 font-normal'>
         ABOUT
       </h1>
-      <div className='py-12 sm:py-20 lg:py-0 xs:px-8 sm:px-20 lg:px-0 relative text-neutral-50'>
+      <div className='py-12 sm:py-20 lg:py-0 xs:px-8 sm:px-20 lg:px-0 relative text-neutral-50  text-sm xl:text-base'>
         <div className='flex flex-col items-center md:flex-row'>
           <div className='w-1/2 hidden lg:inline'>
-            <Image src={image2} alt="image2" />
+            <Image src={image2} alt="image2" className='w-full'/>
           </div>
-          <div className='px-8 lg:px-12 flex flex-col gap-4 justify-center items-center flex-1 text-sm'>
+          <div className='w-1/2 px-8 lg:px-12 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
             <p>Dr. Kim was educated in London and graduated from King's College London with his bachelor of dental surgery degree.
               Dr. Kim has a lot of experience in general dentistry. His particular interest is in cosmetic dentistry and endodontics. In these fields, Dr. Kim has trained under excellent specialists and continues to learning to improve his quality of care to his patients.
               He takes pride in his work and would spend time reading and attending extra courses to hone his skillset. </p>
@@ -90,14 +89,14 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col md:flex-row pt-4 lg:pt-0'>
-          <div className='px-8 lg:px-12 flex flex-col gap-4 justify-center items-center flex-1 text-sm'>
+          <div className='w-1/2 px-8 lg:px-12 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
             <p> Outside of dental hours, Kim is a husband and a tutor to many students. Dr. Kim has a lot of experience teaching younger students in Biology,
               UCAT and with dental or medical university interviews. He enjoys reading books, collects watches and loves sports cars.</p>
             <p>His private mentoring and 'KimAcademy's Medicine Dentistry masterclass' is one of the leading courses of its type. The course has successfully taught over
               500 students worldwide since its inception in 2018. The benefits of his mentoring and masterclasses can be found <Link href="/tutoring" className='underline underline-offset-2 hover:font-semibold'>here</Link>.</p>
           </div>
           <div className='hidden lg:inline w-1/2'>
-            <Image src={image3} alt="image3" />
+            <Image src={image3} alt="image3" className='w-full'/>
           </div>
         </div>
       </div>

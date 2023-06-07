@@ -2,9 +2,10 @@
 import { StaticImageData } from 'next/image'
 import { useState } from 'react'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
+import Faq from './Faq'
 
 type Props = {
-  item: { id: number, name: string, description: string, image: StaticImageData },
+  item: { id: number, name: string, description: string, image: StaticImageData, faq?: [{ q: string, answer: string }] },
   onClose: () => void
 
 }
@@ -12,6 +13,14 @@ type Props = {
 const Treatment = ({ item, onClose }: Props) => {
 
   const [isOpen, setIsOpen] = useState(true)
+
+  const [faqOpen, setFaqOpen] = useState(0)
+  const toggle = (index: number) => {
+    if (faqOpen === index) {
+      return setFaqOpen(0)
+    }
+    setFaqOpen(index)
+  }
 
 
   return (
@@ -22,14 +31,22 @@ const Treatment = ({ item, onClose }: Props) => {
             <button type='button' onClick={onClose} className='p-2 hover:shadow-xl self-end text-xl'>
               <AiOutlineCloseCircle />
             </button>
-              <h3 className='font-normal underline underline-offset-8 text-xl'>{item.name}</h3>
-              <div className='h-full flex flex-col justify-center items-center '>
+            <h3 className='font-normal underline underline-offset-8 text-xl'>{item.name}</h3>
+            <div className='h-full flex flex-col justify-center items-center '>
               <p className='text-sm sm:text-base px-10 lg:px-36 whitespace-pre-line'>{item.description}</p>
+            </div>
+            <div>
+              <h3 className='text-center underline'>FAQs</h3>
+              {item.faq?.map((question, index) => (
+                <Faq key={index}
+                  faqOpen={index === faqOpen}
+                  question={question.q}
+                  answer={question.answer}
+                  toggle={() => toggle(index)} />
+              ))}
             </div>
           </div>
         </div>}
-
-
     </>
 
   )
