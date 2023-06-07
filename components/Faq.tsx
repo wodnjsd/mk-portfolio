@@ -1,5 +1,6 @@
 import React from 'react'
 import { Collapse } from 'react-collapse';
+import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
 
 type Props = {
   faqOpen: boolean,
@@ -10,10 +11,12 @@ type Props = {
 
 const Faq = ({ faqOpen, toggle, question, answer }: Props) => {
   return (
-    <div className='border rounded-md p-2'>
-      <div onClick={toggle} className='flex justify-between px-2'>
-        <p>{question}</p>
-        <div>-</div>
+    <div className='border rounded-md p-2 text-sm' onClick={toggle}>
+      <div className='flex justify-between py-1'>
+        <p className='font-semibold'>{question}</p>
+        <div>
+          {faqOpen? <AiOutlineMinus /> : <AiOutlinePlus />}
+        </div>
       </div>
       <Collapse isOpened={faqOpen}>
         <div>{answer}</div>

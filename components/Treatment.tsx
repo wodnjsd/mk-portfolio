@@ -7,17 +7,16 @@ import Faq from './Faq'
 type Props = {
   item: { id: number, name: string, description: string, image: StaticImageData, faq?: [{ q: string, answer: string }] },
   onClose: () => void
-
 }
 
 const Treatment = ({ item, onClose }: Props) => {
 
   const [isOpen, setIsOpen] = useState(true)
 
-  const [faqOpen, setFaqOpen] = useState(0)
+  const [faqOpen, setFaqOpen] = useState<number | null>(null)
   const toggle = (index: number) => {
     if (faqOpen === index) {
-      return setFaqOpen(0)
+      return setFaqOpen(null)
     }
     setFaqOpen(index)
   }
@@ -35,20 +34,21 @@ const Treatment = ({ item, onClose }: Props) => {
             <div className='h-full flex flex-col justify-center items-center '>
               <p className='text-sm sm:text-base px-10 lg:px-36 whitespace-pre-line'>{item.description}</p>
             </div>
-            <div>
-              <h3 className='text-center underline'>FAQs</h3>
-              {item.faq?.map((question, index) => (
-                <Faq key={index}
-                  faqOpen={index === faqOpen}
-                  question={question.q}
-                  answer={question.answer}
-                  toggle={() => toggle(index)} />
-              ))}
-            </div>
+            {item.faq &&
+              <div className='py-2'>
+                <h3 className='text-center underline pb-2'>FAQs</h3>
+                {item.faq?.map((question, index) => (
+                  <Faq key={index}
+                    faqOpen={index === faqOpen}
+                    question={question.q}
+                    answer={question.answer}
+                    toggle={() => toggle(index)} />
+                ))}
+              </div>
+            }
           </div>
         </div>}
     </>
-
   )
 }
 

@@ -56,10 +56,8 @@ export default [
     faq: [
       {
         q: "What are the benefits of Invisalign?",
-        answer: `Invisalign aligners are virtually invisible and hardly noticeable when worn.
-        As the aligners are removable, you can also eat and drink whatever you wish during Invisalign by removing the aligners before a meal, which is not the case with fixed braces which may result in dietary restrictions.
-        Oral hygiene can be easier to manage as the aligners need to be removed when brushing and flossing.
-        Brackets and wires are not used with Invisalign and as a result, there are fewer appointments required to change these components compared to Invisalign which can reduce the amount of time taken off work to see the dentist to make these adjustments.`,
+        answer: `
+        Invisalign aligners are virtually invisible, removable, and allow for unrestricted eating and drinking. They can be easily removed for oral hygiene practices such as brushing and flossing. Unlike fixed braces, Invisalign does not require brackets and wires, resulting in fewer appointments and less time off work for adjustments.`,
       },
       {
         q: "Does it hurt?",
