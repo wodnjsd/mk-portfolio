@@ -35,8 +35,8 @@ const Treatment = ({ item, onClose }: Props) => {
               <p className='text-sm sm:text-base px-10 lg:px-36 whitespace-pre-line'>{item.description}</p>
             </div>
             {item.faq &&
-              <div className='py-2'>
-                <h3 className='text-center underline pb-2'>FAQs</h3>
+              <div className='py-4'>
+                <h3 className='text-center underline pb-2 text-base'>FAQs</h3>
                 {item.faq?.map((question, index) => (
                   <Faq key={index}
                     faqOpen={index === faqOpen}

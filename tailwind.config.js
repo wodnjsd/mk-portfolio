@@ -19,6 +19,7 @@ module.exports = {
       },
       colors: {
         logo: "#ddcabc",
+        logoDarker: "#d6bfae",
         logoDark: "#cfb5a1"
       },
       backgroundImage: {

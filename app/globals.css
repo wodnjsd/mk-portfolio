@@ -18,6 +18,11 @@
 
 @tailwind components;
 @tailwind utilities;
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;

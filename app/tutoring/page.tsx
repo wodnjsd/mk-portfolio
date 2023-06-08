@@ -7,16 +7,15 @@ import { TbReportSearch, TbBook } from 'react-icons/tb'
 import { SlGraduation } from 'react-icons/sl'
 
 
-type Props = {}
 
-const page = (props: Props) => {
+const page = () => {
   return (
     <div className="px-6 sm:px-20 flex flex-col items-center gap-16 ">
-      <h1 className='w-screen text-3xl pb-20 pt-4 bg-neutral-700 text-center font-montserrat font-normal'>KIM ACADEMY</h1>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-5 sm:px-5">
+      <h1 className='w-screen text-3xl xl:text-4xl pb-20 pt-4 bg-neutral-700 text-center font-montserrat font-normal'>KIM ACADEMY</h1>
+      <div className="flex flex-col md:flex-row justify-between items-center gap-5">
         <div className="flex flex-col justify-center flex-1 pr-3">
-          <h4 className="text-2xl py-5">Private Tuition</h4>
-          <p className="text-sm">Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
+          <h4 className="text-2xl py-5 xl:text-3xl">Private Tuition</h4>
+          <p className="text-sm xl:text-base">Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
             as well as preparation for medical and dental university applications.</p>
         </div>
         <Image src={student} alt="students" className="w-full rounded-md md:w-1/2" />
@@ -24,11 +23,12 @@ const page = (props: Props) => {
 
 {/* Services */}
       <div className="w-full flex flex-col items-center">
-        <h3 className="text-xl py-8 font-normal text-logo">OUR SERVICES</h3>
-        <div className="flex flex-col gap-5 md:flex-row">
+        <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo">OUR SERVICES</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-5">
+
           <div className="text-center rounded-lg">
-            <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo">Exam preparation</h4>
-            <ul className="h-64 xs:h-56 text-sm flex flex-col gap-4 p-7 bg-logo/50">
+            <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo xl:text-lg">Exam preparation</h4>
+            <ul className="h-64 xs:h-56 text-sm xl:text-base flex flex-col gap-4 p-7 bg-logo/50">
               <li>UK common entrance preparation</li>
               <li>GCSE, A-Level, IB Tutoring for most subjects and examination boards</li>
               <li>Foundation course university tutoring</li>
@@ -36,8 +36,8 @@ const page = (props: Props) => {
           </div>
 
           <div className="text-center rounded-lg">
-            <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo">University applications</h4>
-            <ul className="h-72 xs:h-56 text-sm flex flex-col gap-4 p-7 bg-logo/50">
+            <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo xl:text-lg">University applications</h4>
+            <ul className="h-72 xs:h-56 text-sm xl:text-base flex flex-col gap-4 p-7 bg-logo/50">
               <li>UCAS Dentistry and Medicine consultation and advice</li>
               <li>Intensive BMAT and UCAT tuition</li>
               <li>Personal Statement Courses</li>
@@ -49,7 +49,7 @@ const page = (props: Props) => {
 
       {/* Strengths */}
       <div className="w-full flex flex-col items-center pb-8">
-        <h3 className="text-xl py-8 font-normal text-logo">OUR STRENGTHS</h3>
+        <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo">OUR STRENGTHS</h3>
         <div>
           <ul className="text-sm grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 grid-flow-row gap-3">
             <li className="border rounded-md p-5 flex flex-col items-center text-center gap-3">
@@ -108,7 +108,7 @@ const page = (props: Props) => {
 
       {/* Success stories */}
       <div className="w-full flex flex-col items-center sm:pb-4">
-        <h3 className="text-xl py-8 font-normal text-logo">OUR SUCCESS STORIES</h3>
+        <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo">OUR SUCCESS STORIES</h3>
         <div className="grid grid-cols-2 xs:grid-cols-3 md:flex justify-between gap-3 text-xs">
           {tutoringData.map((item) => (
             <div key={item.id} className="border rounded-md flex flex-col items-center text-center">
@@ -143,7 +143,7 @@ const page = (props: Props) => {
       </div>
 
       {/* Contact */}
-      <div className="w-screen bg-logo/50 text-neutral-800 text-lg font-normal flex-col sm:flex-row flex justify-center items-center py-20 px-10 ">
+      <div className="w-screen bg-logo/50 text-neutral-800 text-lg xl:text-xl font-normal flex-col sm:flex-row flex justify-center items-center py-20 px-10 ">
         <Link href={"/contact"} className="hover:underline underline-offset-4">CONTACT US
         </Link>
         <span className="ml-2">TO FIND OUT MORE</span>

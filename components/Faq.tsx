@@ -11,9 +11,9 @@ type Props = {
 
 const Faq = ({ faqOpen, toggle, question, answer }: Props) => {
   return (
-    <div className='border rounded-md p-2 text-sm' onClick={toggle}>
-      <div className='flex justify-between py-1'>
-        <p className='font-semibold'>{question}</p>
+    <div className='border rounded-md py-2 px-4 text-sm my-1' onClick={toggle}>
+      <div className='flex justify-between py-1 font-semibold'>
+        <p>{question}</p>
         <div>
           {faqOpen? <AiOutlineMinus /> : <AiOutlinePlus />}
         </div>

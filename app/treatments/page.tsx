@@ -28,7 +28,7 @@ const page = (props: Props) => {
 
   return (
     <div className='px-5 md:px-20 flex flex-col items-center font-normal'>
-      <h1 className='w-screen bg-neutral-700 pt-4 pb-20 text-3xl text-center font-montserrat'>TREATMENTS</h1>
+      <h1 className='w-screen bg-neutral-700 pt-4 pb-20 text-3xl xl:text-4xl text-center font-montserrat'>TREATMENTS</h1>
       <ul className="flex gap-5 flex-wrap justify-center py-16 sm:py-32">
         {treatments.map((tx) => (
           <div key={tx.id} className="hover:cursor-pointer">

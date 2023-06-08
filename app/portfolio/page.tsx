@@ -9,12 +9,12 @@ type Props = {}
 const page = (props: Props) => {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <h1 className='w-screen pt-4 pb-20 bg-neutral-700 text-3xl text-center font-montserrat font-normal'>PORTFOLIO</h1>
+      <h1 className='w-screen pt-4 pb-20 bg-neutral-700 text-3xl xl:text-4xl text-center font-montserrat font-normal'>PORTFOLIO</h1>
       <div className='flex flex-col gap-10 py-20 px-3 xs:px-10 sm:px-16 justify-center items-center'>
         <div className="md:hidden">
           <PortfolioCarousel />
         </div>
-        <ul className='hidden md:grid grid-cols-3 gap-5 '>
+        <ul className='hidden md:grid grid-cols-3 gap-5 xl:gap-8'>
           {portfolio.map((item) => (
             <li key={item.id} className="flex justify-center relative">
               <PortfolioItem image={item.image} description={item.description} />

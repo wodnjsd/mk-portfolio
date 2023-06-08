@@ -65,7 +65,7 @@ export default function Home() {
       </div>
 
       {/* About */}
-      <h1 className='w-screen bg-neutral-700 text-3xl text-center font-montserrat py-16 sm:py-20 font-normal'>
+      <h1 className='w-screen bg-neutral-700 text-3xl xl:text-4xl text-center font-montserrat py-16 sm:py-20 font-normal'>
         ABOUT
       </h1>
       <div className='py-12 sm:py-20 lg:py-0 xs:px-8 sm:px-20 lg:px-0 relative text-neutral-50  text-sm xl:text-base'>
