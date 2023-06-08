@@ -73,7 +73,7 @@ export default function Home() {
           <div className='w-1/2 hidden lg:inline'>
             <Image src={image2} alt="image2" className='w-full'/>
           </div>
-          <div className='w-1/2 px-8 lg:px-12 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
+          <div className='md:w-1/2 px-8 lg:px-12 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
             <p>Dr. Kim was educated in London and graduated from King's College London with his bachelor of dental surgery degree.
               Dr. Kim has a lot of experience in general dentistry. His particular interest is in cosmetic dentistry and endodontics. In these fields, Dr. Kim has trained under excellent specialists and continues to learning to improve his quality of care to his patients.
               He takes pride in his work and would spend time reading and attending extra courses to hone his skillset. </p>
@@ -89,7 +89,7 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col md:flex-row pt-4 lg:pt-0'>
-          <div className='w-1/2 px-8 lg:px-12 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
+          <div className='md:w-1/2 px-8 lg:px-12 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
             <p> Outside of dental hours, Kim is a husband and a tutor to many students. Dr. Kim has a lot of experience teaching younger students in Biology,
               UCAT and with dental or medical university interviews. He enjoys reading books, collects watches and loves sports cars.</p>
             <p>His private mentoring and 'KimAcademy's Medicine Dentistry masterclass' is one of the leading courses of its type. The course has successfully taught over
