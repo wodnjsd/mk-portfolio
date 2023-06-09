@@ -45,7 +45,7 @@ const Nav = () => {
             ))}
           </ul>
         </div>
-        <button onClick={toggle} className='md:hidden sticky z-50 p-2 text-lg'>
+        <button onClick={toggle} className='md:hidden sticky z-50 p-2 text-xl'>
           {isOpen ? <IoClose /> : <AiOutlineMenu />}
         </button>
       </div>
@@ -55,13 +55,13 @@ const Nav = () => {
         <motion.div initial={{ x: 100 }} animate={{ x: 0 }}
           transition={{ duration: 0.2 }}
           className='absolute bg-stone-400 top-0 left-0 z-40 w-full h-full flex flex-col justify-center items-center md:hidden'>
-          <ul className='flex flex-col items-center gap-6 text-base'>
+          <ul className='flex flex-col items-center gap-6 text-lg'>
             {links.map((link) => (
               <li key={link.id} onClick={toggle} className={pathname === link.to ? 'font-normal underline underline-offset-8' : 'hover:underline underline-offset-8'}>
                 <Link href={link.to}>{link.name}</Link>
               </li>
             ))}
-            <button className='my-10 p-2 text-xl'>
+            <button className='my-10 p-2 text-2xl'>
               <a href="https://www.instagram.com/dr.kimdental/" target="_blank"><BsInstagram /></a>
             </button>
           </ul>

@@ -26,12 +26,12 @@ const page = () => {
 
         <div>
           <h4 className='underline text-center text-lg py-3'>Full Face Transformations</h4>
-          <div className='w-full p-5 rounded-lg shadow-lg shadow-zinc-400 flex justify-around text-lg'>
-            <div className='flex flex-col gap-3 items-center w-1/3'>
+          <div className='w-full p-5 rounded-lg shadow-lg shadow-zinc-400 flex gap-3 text-lg'>
+            <div className='flex flex-col gap-3 items-center w-1/2'>
               <Image src={image1} alt="before" />
               <p>Before</p>
             </div>
-            <div className='flex flex-col gap-3 items-center w-1/3'>
+            <div className='flex flex-col gap-3 items-center w-1/2'>
               <Image src={image2} alt="after" />
               <p>After</p>
             </div>

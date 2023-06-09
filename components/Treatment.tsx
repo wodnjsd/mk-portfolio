@@ -26,17 +26,17 @@ const Treatment = ({ item, onClose }: Props) => {
     <>
       {isOpen &&
         <div className='fixed left-0 top-0 z-50 backdrop-blur-sm w-screen h-screen flex justify-center items-center '>
-          <div className='sm:w-4/5 w-full h-full sm:h-4/5 border p-5 rounded-md bg-logo text-neutral-700 flex flex-col items-center'>
+          <div className='sm:w-4/5 w-full h-full overflow-auto sm:h-4/5 border p-5 rounded-md bg-logo text-neutral-700 flex flex-col items-center'>
             <button type='button' onClick={onClose} className='p-2 hover:shadow-xl self-end text-xl'>
               <AiOutlineCloseCircle />
             </button>
-            <h3 className='font-normal underline underline-offset-8 text-xl'>{item.name}</h3>
+            <h3 className='font-normal underline underline-offset-8 text-xl pb-4'>{item.name}</h3>
             <div className='h-full flex flex-col justify-center items-center '>
-              <p className='text-sm sm:text-base px-10 lg:px-36 whitespace-pre-line'>{item.description}</p>
+              <p className='text-sm xs:text-base lg:px-36 whitespace-pre-line'>{item.description}</p>
             </div>
             {item.faq &&
               <div className='py-4'>
-                <h3 className='text-center underline pb-2 text-base'>FAQs</h3>
+                <h3 className='text-center underline pb-2'>FAQs</h3>
                 {item.faq?.map((question, index) => (
                   <Faq key={index}
                     faqOpen={index === faqOpen}

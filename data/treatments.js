@@ -118,14 +118,14 @@ export default [
   {
     id: 6,
     name: "Porcelain Veneers",
-    description: `Porcelain is the most similar of all materials to natural enamel and hence, when done well, it can look more natural, and attractive, and resists stains better than the alternative material, composite.
+    description: `Porcelain closely resembles natural enamel, offering a more natural and attractive appearance while resisting stains better than the alternative material, composite.
   
-  Porcelain veneers last 10-15 years on average but they may last short or longer than this depending on care. It is also worth noting that repair is not as easy as it is with composite.
+  They typically last 10-15 years with proper care, but reparis are more challenging compared to composite.
   
-  However, porcelain veneers require space to be made on the tooth to fit them and traditional porcelain veneer techniques involve drilling away small quantities of the natural tooth to create this space.
+  Creating space on the tooth is necessary for fitting porcelain veneers, often involving drilling small amounts of the natural tooth.
   
-  Post preparation, the dentist will then make impressions of your teeth and send them off to a highly specialized lab to make you your high-quality veneers. In the meantime, you will be given temporary veneers to wear.
-  Once your definitive veneers are made, they will be applied with adhesive glue to your prepared teeth for good.`,
+  Impressions will then be taken and sent to a specialized lab to craft your high-quality veneers, during which temporary veneers are provided.
+  Finally, the definitive veneers will be applied to the prepared teeth using adhesive glue.`,
     image: veneer,
   },
 ];

@@ -15,7 +15,7 @@ const page = () => {
       <div className="flex flex-col md:flex-row justify-between items-center gap-5">
         <div className="flex flex-col justify-center flex-1 pr-3">
           <h4 className="text-2xl py-5 xl:text-3xl">Private Tuition</h4>
-          <p className="text-sm xl:text-base">Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
+          <p>Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
             as well as preparation for medical and dental university applications.</p>
         </div>
         <Image src={student} alt="students" className="w-full rounded-md md:w-1/2" />
@@ -27,8 +27,8 @@ const page = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-5">
 
           <div className="text-center rounded-lg">
-            <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo xl:text-lg">Exam preparation</h4>
-            <ul className="h-64 xs:h-56 text-sm xl:text-base flex flex-col gap-4 p-7 bg-logo/50">
+            <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo text-lg">Exam preparation</h4>
+            <ul className="h-72 xl:text-base flex flex-col gap-4 p-6 bg-logo/50">
               <li>UK common entrance preparation</li>
               <li>GCSE, A-Level, IB Tutoring for most subjects and examination boards</li>
               <li>Foundation course university tutoring</li>
@@ -36,8 +36,8 @@ const page = () => {
           </div>
 
           <div className="text-center rounded-lg">
-            <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo xl:text-lg">University applications</h4>
-            <ul className="h-72 xs:h-56 text-sm xl:text-base flex flex-col gap-4 p-7 bg-logo/50">
+            <h4 className="flex items-center justify-center h-16 bg-logo/30 text-logo text-lg">University applications</h4>
+            <ul className="h-80 xs:h-72 flex flex-col gap-4 p-6 bg-logo/50">
               <li>UCAS Dentistry and Medicine consultation and advice</li>
               <li>Intensive BMAT and UCAT tuition</li>
               <li>Personal Statement Courses</li>
