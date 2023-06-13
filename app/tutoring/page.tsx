@@ -86,7 +86,7 @@ const page = () => {
 
       {/* Stats */}
       <div className="w-screen bg-neutral-800">
-        <div className="md:flex grid grid-cols-2 gap-5 py-16 md:gap-12 justify-center items-center px-5">
+        <div className="md:flex grid grid-cols-2 gap-5 py-16 justify-around items-center px-5 md:px-20">
           <div className="flex flex-col text-center items-center gap-3">
             <p className="text-3xl font-normal">7</p>
             <p className="text-sm">Years of Experience</p>
@@ -109,7 +109,7 @@ const page = () => {
       {/* Success stories */}
       <div className="w-full flex flex-col items-center sm:pb-4">
         <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo">OUR SUCCESS STORIES</h3>
-        <div className="grid grid-cols-2 xs:grid-cols-3 md:flex justify-between gap-3 text-xs">
+        <div className="grid grid-cols-2 xs:grid-cols-3 md:flex justify-between gap-5 text-xs">
           {tutoringData.map((item) => (
             <div key={item.id} className="border rounded-md flex flex-col items-center text-center">
               <Image src={item.image} alt={item.subject} width={200}></Image>
@@ -125,19 +125,19 @@ const page = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="w-screen translate-y-16 sm:translate-y-0 bg-neutral-700 sm:bg-neutral-600 md:w-full px-12 sm:px-0">
-        <div className="flex flex-col sm:flex-row gap-12 text-xs py-20 md:py-0 md:pb-4 text-center">
+      <div className="w-screen translate-y-16 sm:translate-y-0 bg-neutral-700 sm:bg-neutral-600 md:w-full px-12 sm:px-8">
+        <div className="flex flex-col sm:flex-row gap-12 xl:gap-20 text-xs py-20 md:py-0 md:pb-4 text-center">
           <div className="flex flex-col items-center gap-3">
             <p>"I got the offer from Queen Marys! I am so happy and I cannot have done it without you. Thank you so much."</p>
-            <p className="font-normal text-sm md:py-4">Name</p>
+            {/* <p className="font-normal text-sm md:py-4">Name</p> */}
           </div>
           <div className="flex flex-col items-center gap-3">
             <p>"I am currently sitting on a UCL offer. Thank you so much for your great advice and help, without it I think I would have struggled a lot."</p>
-            <p className="font-normal text-sm md:py-4">Name</p>
+            {/* <p className="font-normal text-sm md:py-4">Name</p> */}
           </div>
           <div className="flex flex-col items-center gap-3">
             <p>"I did two foundation years. First year without Michael, I failed. Second year with him, I passed."</p>
-            <p className="font-normal text-sm md:py-4">Name</p>
+            {/* <p className="font-normal text-sm md:py-4">Name</p> */}
           </div>
         </div>
       </div>

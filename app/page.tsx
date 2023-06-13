@@ -5,6 +5,7 @@ import image2 from '@/public/assets/working.png'
 import image3 from '@/public/assets/friendly.png'
 import patient from '@/public/assets/patients.jpg'
 import student from '@/public/assets/students.jpg'
+import social from '@/public/assets/social.jpeg'
 import testimonials from '../data/testimonials'
 import ReviewCarousel from '@/components/ReviewCarousel'
 
@@ -71,7 +72,7 @@ export default function Home() {
       <div className='py-12 sm:py-20 lg:py-0 xs:px-8 sm:px-16 lg:px-0 relative text-neutral-50'>
         <div className='flex flex-col items-center md:flex-row'>
           <div className='w-1/2 hidden lg:inline'>
-            <Image src={image2} alt="image2" className='w-full'/>
+            <Image src={image2} alt="image2" className='w-full' />
           </div>
           <div className='lg:w-1/2 px-3 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
             <p>Dr. Kim was educated in London and graduated from King's College London with his bachelor of dental surgery degree.
@@ -81,7 +82,7 @@ export default function Home() {
               - teaching different techniques of learning and mentoring aspiring medics or dentists.
             </p>
             <p>
-              Kim tries to keep his practice as friendly as possible and enjoys having conversations with his patients about anything. He is straightforward,
+              Dr. Kim tries to keep his practice as friendly as possible and enjoys having conversations with his patients about anything. He is straightforward,
               no-nonsense approach to dentistry and is a firm believer in concept of doing it right first time and strongly feels that there is no substitute
               for quality. When it comes to dental work, he is always professional to both his community and his colleagues.
             </p>
@@ -89,14 +90,17 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col md:flex-row pt-4 lg:pt-0'>
-          <div className='lg:w-1/2 px-3 lg:px-12 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
-            <p> Outside of dental hours, Kim is a husband and a tutor to many students. Dr. Kim has a lot of experience teaching younger students in Biology,
+          <div className='relative lg:w-1/2 px-3 lg:px-12 xl:px-20 flex flex-col gap-4 xl:gap-8 justify-center items-center'>
+            <p> Outside of dental hours, Dr. Kim is a husband and a tutor to many students. He has a lot of experience teaching younger students in Biology,
               UCAT and with dental or medical university interviews. He enjoys reading books, collects watches and loves sports cars.</p>
             <p>His private mentoring and 'KimAcademy's Medicine Dentistry masterclass' is one of the leading courses of its type. The course has successfully taught over
               500 students worldwide since its inception in 2018. The benefits of his mentoring and masterclasses can be found <Link href="/tutoring" className='underline underline-offset-2 hover:font-semibold'>here</Link>.</p>
+            <div className='hidden xl:block bottom-0 left-0 w-full pt-4'>
+              <Image src={social} alt="social image"/>
+            </div>
           </div>
           <div className='hidden lg:inline w-1/2'>
-            <Image src={image3} alt="image3" className='w-full'/>
+            <Image src={image3} alt="image3" className='w-full' />
           </div>
         </div>
       </div>

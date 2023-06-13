@@ -26,7 +26,7 @@ const Treatment = ({ item, onClose }: Props) => {
     <>
       {isOpen &&
         <div className='fixed left-0 top-0 z-50 backdrop-blur-sm w-screen h-screen flex justify-center items-center '>
-          <div className='sm:w-4/5 w-full h-full overflow-auto sm:h-4/5 border p-5 rounded-md bg-logo text-neutral-700 flex flex-col items-center'>
+          <div className='w-full sm:w-4/5 xl:w-1/2 h-full overflow-auto sm:h-4/5 border p-5 rounded-md bg-logo text-neutral-700 flex flex-col items-center'>
             <button type='button' onClick={onClose} className='p-2 hover:shadow-xl self-end text-xl'>
               <AiOutlineCloseCircle />
             </button>
@@ -35,7 +35,7 @@ const Treatment = ({ item, onClose }: Props) => {
               <p className='text-sm xs:text-base lg:px-36 whitespace-pre-line'>{item.description}</p>
             </div>
             {item.faq &&
-              <div className='py-4'>
+              <div className='py-4 xl:py-12'>
                 <h3 className='text-center underline pb-2'>FAQs</h3>
                 {item.faq?.map((question, index) => (
                   <Faq key={index}
