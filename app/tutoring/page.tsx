@@ -10,9 +10,9 @@ import { SlGraduation } from 'react-icons/sl'
 
 const page = () => {
   return (
-    <div className="px-6 sm:px-20 flex flex-col items-center gap-16 ">
+    <div className="px-6 sm:px-20  flex flex-col items-center gap-16 ">
       <h1 className='w-screen text-3xl xl:text-4xl pb-20 pt-4 bg-neutral-700 text-center font-montserrat font-normal'>KIM ACADEMY</h1>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-5">
+      <div className="flex flex-col md:flex-row max-w-screen-2xl justify-between items-center gap-5">
         <div className="flex flex-col justify-center flex-1 pr-3">
           <h4 className="text-2xl py-5 xl:text-3xl">Private Tuition</h4>
           <p>Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
@@ -48,7 +48,7 @@ const page = () => {
       </div>
 
       {/* Strengths */}
-      <div className="w-full flex flex-col items-center pb-8">
+      <div className="w-full max-w-screen-2xl flex flex-col items-center pb-8">
         <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo">OUR STRENGTHS</h3>
         <div>
           <ul className="text-sm grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 grid-flow-row gap-3">
@@ -85,8 +85,8 @@ const page = () => {
       </div>
 
       {/* Stats */}
-      <div className="w-screen bg-neutral-800">
-        <div className="md:flex grid grid-cols-2 gap-5 py-16 justify-around items-center px-5 md:px-20">
+      <div className="w-screen flex justify-center bg-neutral-800">
+        <div className="w-full md:flex grid grid-cols-2 gap-5 py-16 justify-between items-center max-w-screen-2xl px-5 md:px-20">
           <div className="flex flex-col text-center items-center gap-3">
             <p className="text-3xl font-normal">7</p>
             <p className="text-sm">Years of Experience</p>
@@ -108,8 +108,8 @@ const page = () => {
 
       {/* Success stories */}
       <div className="w-full flex flex-col items-center sm:pb-4">
-        <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo">OUR SUCCESS STORIES</h3>
-        <div className="grid grid-cols-2 xs:grid-cols-3 md:flex justify-between gap-5 text-xs">
+        <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo text-center">OUR SUCCESS STORIES</h3>
+        <div className="grid grid-cols-2 xs:grid-cols-3 md:flex justify-between gap-2 xs:gap-5 text-xs">
           {tutoringData.map((item) => (
             <div key={item.id} className="border rounded-md flex flex-col items-center text-center">
               <Image src={item.image} alt={item.subject} width={200}></Image>
@@ -118,15 +118,15 @@ const page = () => {
                 <p className="italic">{item.university}</p>
                 <p>Class of {item.year}</p>
               </div>
-            </div>
+            </div> 
           )
           )}
         </div>
       </div>
 
       {/* Testimonials */}
-      <div className="w-screen translate-y-16 sm:translate-y-0 bg-neutral-700 sm:bg-neutral-600 md:w-full px-12 sm:px-8">
-        <div className="flex flex-col sm:flex-row gap-12 xl:gap-20 text-xs py-20 md:py-0 md:pb-4 text-center">
+      <div className="w-screen flex justify-center translate-y-16 sm:translate-y-0 bg-neutral-700 sm:bg-neutral-600 md:w-full px-12 sm:px-8">
+        <div className="flex flex-col max-w-screen-2xl justify-between sm:flex-row gap-12 xl:gap-20 text-xs py-20 md:py-0 md:pb-4 text-center">
           <div className="flex flex-col items-center gap-3">
             <p>"I got the offer from Queen Marys! I am so happy and I cannot have done it without you. Thank you so much."</p>
             {/* <p className="font-normal text-sm md:py-4">Name</p> */}

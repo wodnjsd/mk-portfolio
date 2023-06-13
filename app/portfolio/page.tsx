@@ -86,7 +86,7 @@ const page = () => {
         <div className="sm:mb-10 lg:hidden w-full flex justify-center">
           <ReviewCarousel />
         </div>
-        <div className='hidden lg:flex justify-center max-w-6xl gap-5 xl:gap-8 text-xs italic pb-10'>
+        <div className='hidden lg:flex justify-center max-w-7xl gap-5 xl:gap-8 text-xs italic pb-10'>
           {testimonials.map((item) => (
             <div key={item.id}>
               <p>"{item.content}"</p>

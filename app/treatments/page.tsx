@@ -41,7 +41,7 @@ const page = () => {
         )
         )}
       </ul>
-      {selectedTreatment && <Treatment item={selectedTreatment} onClose={handleClose} />}
+      {selectedTreatment && <Treatment item={selectedTreatment} onClose={handleClose}/>}
     </div>
   )
 }

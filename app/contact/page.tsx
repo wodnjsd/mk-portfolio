@@ -26,9 +26,9 @@ const whatsappUrl = `https://wa.me/${phoneNumber}`
 
 
   return (
-    <div className='flex flex-col '>
+    <div className='flex flex-col items-center'>
       <h1 className='w-screen text-3xl xl:text-4xl pb-20 pt-4 bg-neutral-700 text-center font-normal'>CONTACT</h1>
-      <div className='px-8 sm:px-20 flex flex-col md:flex-row justify-around gap-6 items-start md:items-center py-16 md:py-36'>
+      <div className='w-full px-8 sm:px-20 flex flex-col md:flex-row justify-around gap-6 items-start md:items-center py-16 md:py-36 max-w-screen-2xl'>
         <div className='md:px-5'>
           <h1 className='text-3xl sm:text-5xl font-montserrat sm:mb-10'>Get in touch</h1>
           {/* Social Media Links */}

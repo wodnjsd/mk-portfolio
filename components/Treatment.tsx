@@ -25,7 +25,7 @@ const Treatment = ({ item, onClose }: Props) => {
   return (
     <>
       {isOpen &&
-        <div className='fixed left-0 top-0 z-50 backdrop-blur-sm w-screen h-screen flex justify-center items-center' onClick={onClose}>
+        <div className='fixed left-0 top-0 z-50 backdrop-blur-sm w-screen h-screen flex justify-center items-center'>
           <div className='w-full sm:w-3/5 xl:w-2/5 h-full overflow-auto sm:h-4/5 border p-5 rounded-md bg-logo text-neutral-700 flex flex-col items-center'>
             <button type='button' onClick={onClose} className='p-2 hover:shadow-xl self-end text-xl'>
               <AiOutlineCloseCircle />
