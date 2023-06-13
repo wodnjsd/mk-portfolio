@@ -46,8 +46,8 @@ export default function Home() {
       </div>
 
       {/* Links */}
-      <div className='flex flex-col xs:flex-row w-full z-30 sm:text-lg'>
-        <div className='flex relative justify-center items-center xs:w-1/2'>
+      <div className='flex flex-col xsm:flex-row w-full z-30 sm:text-lg'>
+        <div className='flex relative justify-center items-center xsm:w-1/2'>
           <Link href={"/portfolio"}>
             <div className='absolute w-full h-full z-30 flex items-center justify-center bg-logoDark text-center text-white opacity-0 transition duration-500 hover:opacity-90'>
               FOR PATIENTS
@@ -55,7 +55,7 @@ export default function Home() {
             <Image src={patient} alt="image3" />
           </Link>
         </div>
-        <div className='flex relative justify-center items-center xs:w-1/2'>
+        <div className='flex relative justify-center items-center xsm:w-1/2'>
           <Link href={'/tutoring'}>
             <div className='absolute w-full h-full z-30 flex items-center justify-center bg-logoDark text-center text-white opacity-0 transition duration-500 hover:opacity-90'>
               <p>FOR STUDENTS</p>
@@ -69,7 +69,7 @@ export default function Home() {
       <h1 className='w-screen bg-neutral-700 text-3xl xl:text-4xl text-center font-montserrat py-16 sm:py-20 font-normal'>
         ABOUT
       </h1>
-      <div className='py-12 sm:py-20 lg:py-0 xs:px-8 sm:px-16 lg:px-0 relative text-neutral-50'>
+      <div className='py-12 sm:py-20 lg:py-0 xs:px-6 sm:px-16 lg:px-0 relative text-neutral-50'>
         <div className='flex flex-col items-center md:flex-row'>
           <div className='w-1/2 hidden lg:inline'>
             <Image src={image2} alt="image2" className='w-full' />

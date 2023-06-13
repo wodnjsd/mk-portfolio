@@ -26,7 +26,7 @@ const page = () => {
       <h1 className='w-screen pt-4 pb-20 bg-neutral-700 text-3xl xl:text-4xl text-center font-montserrat font-normal'>PORTFOLIO</h1>
       <div className='flex flex-col gap-12 py-20 px-2 xs:px-6 sm:px-12 justify-center items-center'>
         <div className="md:hidden">
-          <h4 className='underline underline-offset-4 text-center text-lg py-3'>Smile Transformations & Treatment Procedures</h4>
+          <h4 className='underline underline-offset-4 text-center text-lg pb-6'>Smile Transformations & Treatment Procedures</h4>
           <PortfolioCarousel />
         </div>
 

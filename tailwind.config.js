@@ -16,6 +16,7 @@ module.exports = {
       },
       screens: {
         'xs': '375px',
+        'xsm': '415px',
       },
       colors: {
         logo: "#ddcabc",

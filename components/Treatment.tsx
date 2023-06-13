@@ -30,9 +30,9 @@ const Treatment = ({ item, onClose }: Props) => {
             <button type='button' onClick={onClose} className='p-2 hover:shadow-xl self-end text-xl'>
               <AiOutlineCloseCircle />
             </button>
-            <h3 className='font-normal underline underline-offset-8 text-xl pb-4'>{item.name}</h3>
+            <h3 className='font-normal underline underline-offset-8 text-xl pb-5'>{item.name}</h3>
             <div className='h-full flex flex-col justify-center items-center '>
-              <p className='text-sm xs:text-base lg:px-16 whitespace-pre-line'>{item.description}</p>
+              <p className='text-sm px-2 xs:text-base lg:px-16 whitespace-pre-line'>{item.description}</p>
             </div>
             {item.faq &&
               <div className='py-4'>

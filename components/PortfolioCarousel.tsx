@@ -40,7 +40,7 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-      <p className='text-center pt-8'>{slides[current].description}</p>
+      <p className='text-center pt-6 md:pt-8'>{slides[current].description}</p>
     </>
   )
 }
