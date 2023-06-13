@@ -5,7 +5,6 @@ import { useState } from 'react'
 import treatments from '@/data/treatments.js'
 import Image, { StaticImageData } from "next/image"
 
-type Props = {}
 
 interface TreatmentItem {
   id: number;
@@ -14,7 +13,7 @@ interface TreatmentItem {
   image: StaticImageData
 }
 
-const page = (props: Props) => {
+const page = () => {
 
   const [selectedTreatment, setSelectedTreatment] = useState<TreatmentItem | null>(null);
 

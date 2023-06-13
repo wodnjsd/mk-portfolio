@@ -1,15 +1,15 @@
 "use client"
 import { useState, useEffect } from 'react'
 import testimonials from '@/data/testimonials'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const ReviewCarousel = () => {
   const [current, setCurrent] = useState(0)
   let autoSlide = true
   let autoSlideInterval = 5000
 
-
   const next = () => setCurrent((current: number) => (current === testimonials.length - 1 ? 0 : current + 1))
+  
   const variants = {
     hidden: { opacity: 0, x: -50, y:0 },
     visible: { x: 0, opacity: 1, y:0 },
