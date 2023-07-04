@@ -13,6 +13,7 @@ import { BsInstagram } from 'react-icons/bs'
 
 const links = [
   { name: "Home", to: "/", id: 1 },
+  { name: "About", to: "/about", id: 2 },
   { name: "Treatments", to: "/treatments", id: 3 },
   { name: "Portfolio", to: "/portfolio", id: 4 },
   { name: "Tutoring", to: "/tutoring", id: 5 },
@@ -38,14 +39,14 @@ const Nav = () => {
 
       {/* Nav Links */}
       <div>
-        <div className='hidden md:flex text-sm md:text-base font-light py-3'>
+        <div className='hidden lg:flex text-base font-light py-3'>
           <ul className='flex gap-5'>
             {links.map((link) => (
               <li key={link.id} className={pathname === link.to ? 'text-logo font-normal underline underline-offset-8' : 'hover:underline underline-offset-8'}><Link href={link.to}>{link.name}</Link></li>
             ))}
           </ul>
         </div>
-        <button onClick={toggle} className='md:hidden sticky z-50 p-2 text-xl'>
+        <button onClick={toggle} className='lg:hidden sticky z-50 p-2 text-xl'>
           {isOpen ? <IoClose /> : <AiOutlineMenu />}
         </button>
       </div>
@@ -54,7 +55,7 @@ const Nav = () => {
       {isOpen && (
         <motion.div initial={{ x: 100 }} animate={{ x: 0 }}
           transition={{ duration: 0.2 }}
-          className='absolute bg-stone-400 top-0 left-0 z-40 w-full h-full flex flex-col justify-center items-center md:hidden'>
+          className='absolute bg-stone-400 top-0 left-0 z-40 w-full h-full flex flex-col justify-center items-center lg:hidden'>
           <ul className='flex flex-col items-center gap-6 text-lg'>
             {links.map((link) => (
               <li key={link.id} onClick={toggle} className={pathname === link.to ? 'font-normal underline underline-offset-8' : 'hover:underline underline-offset-8'}>
