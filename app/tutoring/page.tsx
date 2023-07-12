@@ -23,7 +23,7 @@ const page = () => {
 
 {/* Services */}
       <div className="w-full flex flex-col items-center">
-        <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo">OUR SERVICES</h3>
+        <h3 className="text-xl xl:text-3xl py-8 font-normal xl:font-light text-logo">OUR SERVICES</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-5">
 
           <div className="text-center rounded-lg">
@@ -49,7 +49,7 @@ const page = () => {
 
       {/* Strengths */}
       <div className="w-full max-w-screen-2xl flex flex-col items-center pb-8">
-        <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo">OUR STRENGTHS</h3>
+        <h3 className="text-xl xl:text-3xl py-8 font-normal xl:font-light text-logo">OUR STRENGTHS</h3>
         <div>
           <ul className="text-sm grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 grid-flow-row gap-3">
             <li className="border rounded-md p-5 flex flex-col items-center text-center gap-3">
@@ -108,7 +108,7 @@ const page = () => {
 
       {/* Success stories */}
       <div className="w-full flex flex-col items-center sm:pb-4">
-        <h3 className="text-xl xl:text-2xl py-8 font-normal text-logo text-center">OUR SUCCESS STORIES</h3>
+        <h3 className="text-xl xl:text-3xl py-8 font-normal xl:font-light text-logo text-center">OUR SUCCESS STORIES</h3>
         <div className="grid grid-cols-2 xs:grid-cols-3 md:flex justify-between gap-2 xs:gap-5 text-xs">
           {tutoringData.map((item) => (
             <div key={item.id} className="border rounded-md flex flex-col items-center text-center">
@@ -143,7 +143,7 @@ const page = () => {
       </div>
 
       {/* Contact */}
-      <div className="w-screen bg-logo/50 text-neutral-800 text-lg xl:text-xl font-normal flex-col sm:flex-row flex justify-center items-center py-20 px-10 ">
+      <div className="w-screen bg-logo/50 text-neutral-800 text-lg font-normal xl:font-light xl:text-3xl flex-col sm:flex-row flex justify-center items-center py-20 px-10 ">
         <Link href={"/contact"} className="hover:underline underline-offset-4">CONTACT US
         </Link>
         <span className="ml-2">TO FIND OUT MORE</span>

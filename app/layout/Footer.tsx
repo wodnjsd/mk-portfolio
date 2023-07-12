@@ -6,14 +6,15 @@ import { BsInstagram } from 'react-icons/bs'
 
 const Footer = () => {
   return (
-    <div className="bg-neutral-700 px-12 text-sm flex flex-col py-12 items-center gap-6 font-inter font-thin">
+    <div className="bg-neutral-700 px-8 text-sm flex flex-col py-12 items-center gap-6 font-inter font-thin">
       <div className="text-4xl text-logo">
         <a href="https://www.instagram.com/dr.kimdental/" target="_blank" className="flex flex-col gap-3 items-center ">
           <BsInstagram />
           <p className="text-neutral-100 text-xs underline underline-offset-1">@dr.kimdental</p>
         </a>
       </div>
-      <div className="flex gap-5 px-3">
+      <div className="flex flex-wrap gap-5 justify-center">
+      <Link href='/about' className="hover:underline underline-offset-2">About</Link>
         <Link href='/treatments' className="hover:underline underline-offset-2">Treatments</Link>
         <Link href='/portfolio' className="hover:underline underline-offset-2">Portfolio</Link>
         <Link href='/tutoring' className="hover:underline underline-offset-2">Tutoring</Link>
