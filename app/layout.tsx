@@ -2,7 +2,7 @@ import Nav from './layout/Nav'
 import './globals.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Footer from './layout/Footer'
-import { Lora, Roboto, Inter_Tight, Montserrat, Allura} from 'next/font/google'
+import { Lora, Roboto, Inter_Tight, Montserrat, Allura, Cormorant_Garamond} from 'next/font/google'
 
 export const metadata = {
   title: 'Michael Kim',
@@ -26,6 +26,12 @@ const inter = Inter_Tight({
   variable: '--font-inter'
 })
 
+const cormorant = Cormorant_Garamond({
+  weight: "300",
+  subsets: ['latin'],
+  variable: '--font-cormorant'
+})
+
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat'
@@ -43,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${lora.variable} ${roboto.variable} ${inter.variable} ${montserrat.variable}  ${allura.variable}`}>
+    <html lang="en" className={`${lora.variable} ${roboto.variable} ${inter.variable} ${montserrat.variable} ${allura.variable}  ${cormorant.variable}`}>
       <body className="h-screen flex flex-col justify-between bg-neutral-600 font-montserrat font-light text-neutral-100" ><Nav />{children}<Footer /></body>
     </html>
   )

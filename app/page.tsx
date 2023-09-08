@@ -5,30 +5,33 @@ import patient from '@/public/assets/patients.jpg'
 import student from '@/public/assets/students.jpg'
 import testimonials from '../data/testimonials'
 import ReviewCarousel from '@/components/ReviewCarousel'
-import { HiCheck } from 'react-icons/hi'
 import { AiOutlineCheck } from 'react-icons/ai'
 
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <div className='relative pt-10 flex justify-start bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800'>
-        <div className='p-8 sm:p-10 lg:p-16 xl:px-28 text-center flex flex-col gap-16 justify-center sm:w-3/5 z-10'>
-          <div className='text-base xl:text-lg text-logo font-roboto font-light'>
-            <p className='leading-snug'>
-              As a clinician and tutor, I believe that there is no end to education. It is not that you read a book, pass an examination, and finish with education.
-            </p>
-            <p className='py-3 leading-snug'>
-              Life as a whole - from the moment you are born to the moment you die - is a learning process.
-            </p>
-            <p className='leading-snug'>
-              My interest lies in caring for patients' long-term health through curing and preventing diseases with education.
-            </p>
+      <div className='bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800 lg:hidden pt-36 pb-52 w-screen text-center text-5xl font-cormorant'>KIM DENTAL</div>
+      <div className='pt-10 bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800'>
+        <div className='relative flex justify-start'>
+          <div className='p-8 sm:p-10 lg:p-16 xl:px-28 text-center flex flex-col gap-16 justify-center sm:w-3/5 z-10'>
+            <div className='text-base xl:text-lg text-logo font-roboto font-light'>
+              <p className='leading-snug'>
+                As a clinician and tutor, I believe that there is no end to education. It is not that you read a book, pass an examination, and finish with education.
+              </p>
+              <p className='py-3 leading-snug'>
+                Life as a whole - from the moment you are born to the moment you die - is a learning process.
+              </p>
+              <p className='leading-snug'>
+                My interest lies in caring for patients' long-term health through curing and preventing diseases with education.
+              </p>
+            </div>
+            <p className='text-left md:text-center font-allura text-4xl md:text-5xl text-logo'>Dr. Michael Kim</p>
           </div>
-          <p className='text-left md:text-center font-allura text-4xl md:text-5xl text-logo'>Dr. Michael Kim</p>
-        </div>
-        <div className='w-4/5 hidden xs:inline absolute md:relative right-0 brightness-75 opacity-50 md:opacity-75 md:w-1/2'>
+          <div className='w-4/5 hidden xs:inline absolute md:relative right-0 brightness-75 opacity-50 md:opacity-75 md:w-1/2'>
           <Image src={face3} alt="image1" />
         </div>
+        </div>
+
       </div>
 
       {/* Testimonials */}
@@ -71,12 +74,12 @@ export default function Home() {
         </h1>
         <div className='flex justify-center items-center px-8 sm:px-16 py-12'>
           <div className='flex flex-col gap-2 text-logo/80'>
-            <p className='flex gap-1'><AiOutlineCheck className='text-xl'/>Friendly and approachable</p>
-            <p className='flex gap-1'><AiOutlineCheck className='text-xl'/>Use of latest technologies and techniques</p>
-            <p className='flex gap-1'><AiOutlineCheck className='text-xl'/>Bespoke treatment plans tailored to suit your requirements</p>
-            <p className='flex gap-1'><AiOutlineCheck className='text-xl'/>Able to provide exceptional long-lasting results</p>
-            <p className='flex gap-1'><AiOutlineCheck className='text-xl'/>Closely works with specialists to provide safe and reliable treatments</p>
-            <p className='flex gap-1'><AiOutlineCheck className='text-xl'/>Recommended by many patients' friends and family</p>
+            <p className='flex gap-1'><AiOutlineCheck className='text-xl' />Friendly and approachable</p>
+            <p className='flex gap-1'><AiOutlineCheck className='text-xl' />Use of latest technologies and techniques</p>
+            <p className='flex gap-1'><AiOutlineCheck className='text-xl' />Bespoke treatment plans tailored to suit your requirements</p>
+            <p className='flex gap-1'><AiOutlineCheck className='text-xl' />Able to provide exceptional long-lasting results</p>
+            <p className='flex gap-1'><AiOutlineCheck className='text-xl' />Closely works with specialists to provide safe and reliable treatments</p>
+            <p className='flex gap-1'><AiOutlineCheck className='text-xl' />Recommended by many patients' friends and family</p>
           </div>
 
         </div>
