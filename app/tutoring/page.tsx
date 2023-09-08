@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import tutoringData from "../../data/tutoring"
 import student from '../../public/assets/student.jpg'
+import lab from '../../public/assets/tutoring/lab_photo.jpeg'
 import { MdOutlineInsertChart } from 'react-icons/md'
 import { TbReportSearch, TbBook } from 'react-icons/tb'
 import { SlGraduation } from 'react-icons/sl'
@@ -12,13 +13,13 @@ const page = () => {
   return (
     <div className="px-6 sm:px-20  flex flex-col items-center gap-16 ">
       <h1 className='w-screen text-3xl xl:text-4xl pb-20 pt-4 bg-neutral-700 text-center font-montserrat font-normal'>KIM ACADEMY</h1>
-      <div className="flex flex-col md:flex-row max-w-screen-2xl justify-between items-center gap-5">
+      <div className="flex flex-col md:flex-row max-w-screen-2xl justify-between items-center gap-10">
         <div className="flex flex-col justify-center flex-1 pr-3">
           <h4 className="text-2xl py-5 xl:text-3xl">Private Tuition</h4>
-          <p>Michael is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
+          <p>Dr.Kim is also the founder of Kim Academy, which specialises in private tuition to prepare students for GCSE and A-Levels,
             as well as preparation for medical and dental university applications.</p>
         </div>
-        <Image src={student} alt="students" className="w-full rounded-md md:w-1/2" />
+        <Image src={lab} alt="students" className="w-full rounded-md md:w-1/2" />
       </div>
 
 {/* Services */}
