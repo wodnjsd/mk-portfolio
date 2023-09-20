@@ -28,8 +28,8 @@ export default function Home() {
             <p className='text-left md:text-center font-allura text-4xl md:text-5xl text-logo'>Dr. Michael Kim</p>
           </div>
           <div className='w-4/5 hidden xs:inline absolute md:relative right-0 brightness-75 opacity-50 md:opacity-75 md:w-1/2'>
-          <Image src={face3} alt="image1" />
-        </div>
+            <Image src={face3} alt="image1" />
+          </div>
         </div>
 
       </div>
@@ -39,10 +39,12 @@ export default function Home() {
         <ReviewCarousel />
       </div>
       <div className='bg-neutral-800 hidden md:flex gap-7 text-xs italic px-10 py-16'>
-        {testimonials.map((item) => (
+        {testimonials.map((item) => item.id < 5 && (
           <div key={item.id}>
-            <p>"{item.content}"</p>
-            <p className='pt-1'>- Google Review</p>
+            <a href={item.link} target="_blank">
+              <p>"{item.content}"</p>
+              <p className='pt-1'>- Google Review</p>
+            </a>
           </div>)
         )}
       </div>

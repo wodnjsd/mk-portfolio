@@ -31,11 +31,11 @@ const ReviewCarousel = () => {
           transition={{ duration: 0.5 }}
           className='text-sm italic flex flex-col gap-3'
           key={current}>
+            <a href={testimonials[current].link}>
             <p>"{testimonials[current].content}"</p>
             <p>-Google Review</p>
+            </a>
         </motion.div>
-
-
     </div>
   )
 }
