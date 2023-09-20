@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import face3 from '@/public/assets/face-colour.png'
@@ -6,11 +7,19 @@ import student from '@/public/assets/students.jpg'
 import testimonials from '../data/testimonials'
 import ReviewCarousel from '@/components/ReviewCarousel'
 import { AiOutlineCheck } from 'react-icons/ai'
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <div className='bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800 lg:hidden pt-36 pb-52 w-screen text-center text-5xl font-cormorant'>KIM DENTAL</div>
+      <motion.div className='bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800 md:hidden pt-36 pb-52 w-screen text-center text-6xl font-cormorant text-neutral-300'
+       initial="hidden"
+       whileInView="visible"
+       viewport={{ once: true, amount: 0.5 }}
+       transition={{ duration: 2.0 }}
+       variants={{
+         hidden: { opacity: 0, x: -50 },
+         visible: { opacity: 1, x: 0 }}}>KIM DENTAL</motion.div>
       <div className='pt-10 bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800'>
         <div className='relative flex justify-start'>
           <div className='p-8 sm:p-10 lg:p-16 xl:px-28 text-center flex flex-col gap-16 justify-center sm:w-3/5 z-10'>
@@ -27,7 +36,7 @@ export default function Home() {
             </div>
             <p className='text-left md:text-center font-allura text-4xl md:text-5xl text-logo'>Dr. Michael Kim</p>
           </div>
-          <div className='w-4/5 hidden xs:inline absolute md:relative right-0 brightness-75 opacity-50 md:opacity-75 md:w-1/2'>
+          <div className='w-2/3 hidden xs:inline absolute md:relative right-0 brightness-75 opacity-50 md:opacity-75 md:w-1/2'>
             <Image src={face3} alt="image1" />
           </div>
         </div>
@@ -70,11 +79,12 @@ export default function Home() {
       </div>
 
       {/* Why choose */}
-      <div className='bg-neutral-800'>
-        <h1 className='w-screen text-3xl xl:text-4xl text-center font-montserrat pt-16'>
+      <div className='bg-neutral-800 py-16'>
+        <h1 className='w-screen text-3xl xl:text-4xl text-center font-montserrat text-neutral-300 pb-16'>
           WHY CHOOSE DR KIM?
         </h1>
-        <div className='flex justify-center items-center px-8 sm:px-16 py-12'>
+        <hr className='w-full text-neutral-300'/>
+        <div className='flex justify-center items-center px-8 sm:px-16 pt-12'>
           <div className='flex flex-col gap-2 text-logo/80'>
             <p className='flex gap-1'><AiOutlineCheck className='text-xl' />Friendly and approachable</p>
             <p className='flex gap-1'><AiOutlineCheck className='text-xl' />Use of latest technologies and techniques</p>
@@ -86,7 +96,7 @@ export default function Home() {
 
         </div>
       </div>
-      <div className="w-screen bg-logo/50 text-neutral-800 text-xl font-normal xl:font-light xl:text-3xl flex-col sm:flex-row flex justify-center items-center py-20 px-10 ">
+      <div className="w-screen bg-logo/50 text-neutral-800 text-xl font-normal xl:font-light xl:text-3xl flex-col sm:flex-row flex justify-center items-center py-16 sm:py-20 px-10 ">
         <Link href={"/contact"} className="hover:underline underline-offset-4">CONTACT US
         </Link>
         <span className="ml-2 text-center">TO FIND OUT MORE</span>

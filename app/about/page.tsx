@@ -1,8 +1,8 @@
 import React from 'react'
 import image1 from '@/public/assets/about-teaching.jpeg'
 import image2 from '@/public/assets/working.png'
-import image3 from '@/public/assets/friendly.png'
-import social from '@/public/assets/social.jpeg'
+// import image3 from '@/public/assets/friendly.png'
+// import social from '@/public/assets/social.jpeg'
 import Image from 'next/image'
 import Link from 'next/link'
 
